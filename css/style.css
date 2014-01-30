@@ -115,15 +115,26 @@ background-image:-ms-linear-gradient(top, #a8e9ff 0%, #ffffff 27%,#a8e9ff 96%);
   .img_holder 
   {
   display:inline-block;
-  width:20%;
-  background-image:url("../images/test.jpg");
-  background-size:cover;
-  overflow:hidden;
+  position: relative;
+  width:25%;
   }
+.image_div
+  {
+    position: absolute;
+    top:19%;
+    left:10%;
+    bottom:10%;
+    right:11%;
+  background-image:url("../images/test.JPG");
+  background-size:cover;
+  z-index: -90;
+
+}
  .img_holder .hold
  {
-width:100%;
-height:auto;
+     padding-top: 82%;
+background-image:url("../images/frame.png");
+background-size:cover;
  }
  #texts
  {
