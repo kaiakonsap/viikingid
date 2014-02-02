@@ -103,6 +103,7 @@ background-image:-ms-linear-gradient(top, #a8e9ff 0%, #ffffff 27%,#a8e9ff 96%);
  .slaider_container
  {
      width: 80%;
+     min-width: 762px;
      margin-right: auto;
      margin-left: auto;
  }
@@ -111,6 +112,7 @@ background-image:-ms-linear-gradient(top, #a8e9ff 0%, #ffffff 27%,#a8e9ff 96%);
   display:inline-block;
   position: relative;
   width:25%;
+  min-width: 190px;
       z-index: 90
   }
 .image_div
@@ -145,6 +147,7 @@ z-index: 89;
  margin-right:8%;
 padding-top:5%;
  float:left;
+ min-width: 219px;
  }
  .text:first-child
  {
@@ -162,3 +165,37 @@ padding-top:5%;
  {
     line-height:inherit;
  }
+@media screen and (max-width:827px)
+{
+.img_holder
+{
+    display: block;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+    .slaider_container
+    {
+        width: 70%;
+        min-width: 100px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .texts
+    {
+        clear: both;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        min-width: 219px;
+    }
+    .text
+    {
+        clear: both;
+        display: block;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        min-width: 219px;
+    }
+}
