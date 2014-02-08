@@ -92,6 +92,10 @@ a:hover
  {
      display: table;
  }
+.panorama
+ {
+     display: block;
+ }
 .wrapper #frame
 { display: table-cell; vertical-align: middle; }
  #frame

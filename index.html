@@ -5,13 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/style.css"/>
-    <link href="css/jquery.bxslider.css" type="text/css" rel="stylesheet" media="screen"/>
     <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="js/jquery.bxslider.js"></script>
-    <script src="js/main.js"></script>
     <!--[if lt IE 9]>
     <script src="js/aFarkas-html5shiv-cec73ff/dist/html5shiv.js"></script>
     <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.panorama.css" media="screen" />
+    <script type="text/javascript" src="js/jquery.panorama.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("img.advancedpanorama").panorama({
+                auto_start: 0,
+                start_position: 0
+                /* add your execution parameters here */
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/cvi_text_lib.js"></script>
+    <script type="text/javascript" src="js/jquery.advanced-panorama.js"></script>
+    <script type="text/javascript" src="js/jquery.flipv.js"></script>
+    <script type="text/javascript" src="js/thickbox.js"></script>
 </head>
 
 <body>
@@ -31,72 +43,13 @@
             <img src="images/fb.png"/>
         </div>
     </header>
-    <div class="wrapper">
-         <div id="frame">
-        <img class="frame" src="images/top_frame.png"/>
-
-        <div id="paper">
-            <nav>
-                <ul>
-                    <li><a class="active" href="#">Külast</a></li>
-                    <li><a href="#">Koostöö</a></li>
-                    <li><a href="#">Tunnustused</a></li>
-                </ul>
-            </nav>
-            <div id="frame_content">
-                <ul class="bxslider">
-                    <li>
-                        <div class="slaider_container">
-                            <div class="img_holder">
-                                <div class="hold"></div>
-                                <div class="image_div">
-                                </div>
-                            </div>
-                            <div class="texts">
-                                <div class="text">
-                                    <p><span>V</span>iikingite küla vero eos et accusamus et iusto odio dignissimos ducimus
-                                        qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-                                        molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
-                                        qui officia deserunt mollitia animi, id est laborum et dolorum fuga. </p>
-                                </div>
-                                <div class="text">
-                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
-                                        soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
-                                        placeat facere possimus, omnis voluptas </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="slaider_container">
-                            <div class="img_holder">
-                                <div class="image_div">
-                                </div>
-                                <div class="hold"></div>
-                            </div>
-
-                            <div class="texts">
-                                <div class="text">
-                                    <p><span>A</span>t vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-                                        molestias excepturi sint occaecati cupiditate non provident, similique sunt in
-                                        culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. </p>
-                                </div>
-                                <div class="text">
-                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
-                                        soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
-                                        placeat facere possimus, omnis voluptas </p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-        <img class="frame" src="images/bottom_frame.png"/>
-    </div>
+    <div class="wrapper panorama">
+        <img src="images/panoraam.jpg" class="advancedpanorama" width="3220px" height="508px" usemap="testmap" alt="Atelier du sculpteur" />
+        <map id="testmap" name="testmap">
+            <area shape="rect" coords="1653,72,1839,255" href="index.html" alt="vers la salle de formation" />
+            <area shape="rect" coords="2013,114,2091,210" href="images/test.JPG" alt="statues" class="thickbox" />
+            <area shape="rect" coords="1920,276,2070,351" href="images/test.JPG" alt="gouges" class="thickbox" />
+        </map>
     </div>
 </div>
 
