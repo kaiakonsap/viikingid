@@ -62,7 +62,7 @@
 .bx-wrapper .bx-pager {
 	text-align: center;
 	font-size: .85em;
-	font-family: Lucida_regular;
+	font-family: lucida_regular;
 	font-weight: bold;
 	color: #666;
     overflow: scroll;
@@ -119,7 +119,7 @@
 
 .bx-wrapper .bx-controls-direction a {
 	position: absolute;
-	top: 35%;
+	top: 40%;
 	margin-top: -16px;
 	outline: 0;
 	width: 22px;
@@ -196,7 +196,7 @@
 
 .bx-wrapper .bx-caption span {
 	color: #110200;
-	font-family: Lucida_regular;
+	font-family: lucida_regular;
 	display: block;
 	font-size: .85em;
 	padding: 10px;
@@ -214,7 +214,7 @@
 
 .bx-caption2 span {
 	color: #110200;
-	font-family: Lucida_regular;
+	font-family: lucida_regular;
 	display: block;
 	font-size: .85em;
 	padding: 10px;

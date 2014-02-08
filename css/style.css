@@ -2,12 +2,12 @@
 @font-face
 {
     font-family: lucida_regular;
-    src: url(../fonts/lucida_sans_unicode_regular.ttf);
+    src: url(../fonts/lucida_sans_unicode.woff);
 }
 @font-face
 {
     font-family: algerian;
-    src: url(../fonts/algerian.TTF);
+    src: url(../fonts/algerian.woff);
 }
 body
 {
@@ -28,7 +28,6 @@ background-image:-ms-linear-gradient(top, #a8e9ff 0%, #ffffff 27%,#a8e9ff 96%);
 	margin-left:auto;
 	margin-right:auto;
  margin-top:2%;
- overflow:hidden;
  padding-bottom:3%;
  }
 
@@ -52,10 +51,10 @@ p
 
  p span
  {
- font-family:Algerian;
+ font-family:algerian;
  font-size:25px;
  line-height:normal;
- } 
+ }
 
  a
  {text-decoration:none;
@@ -68,7 +67,7 @@ a:hover
  {
  color:#c06733;
  }
- #paper a
+ #paper nav a
  {
      font-size: 14px;
  }
@@ -82,6 +81,7 @@ a:hover
  {
      display: inline-block;
      float: right;
+     margin-top: -7px;
  }
  #icons img
  {
@@ -138,6 +138,47 @@ a:hover
      margin-left: auto;
      overflow: hidden;
  }
+ .thumbs
+ {
+     width: 60%;
+     min-width: 703px;
+
+ }
+ .images
+ {
+     margin-top: 2%;
+ }
+.images a
+ {
+     padding: 0;
+ }
+ .thumb
+ {
+     display: inline-block;
+     margin-right: 9%;
+ }
+.thumb .link_holder
+ {
+    margin-top: 10px;
+ }
+.thumb .link_holder p
+ {
+     font-family: algerian;
+    color:#500000;
+    text-align: center;
+    padding: 0 10px;
+    font-size: 11px;
+ }
+.thumb .img_holder
+ {
+    min-width: 161px;
+    width:24%;
+}
+
+.images .img_holder:last-child
+{
+    margin-right: 0;
+}
   .img_holder 
   {
   display:inline-block;
@@ -146,6 +187,7 @@ a:hover
   min-width: 190px;
       z-index: 90
   }
+
 .image_div
   {
     position: absolute;
@@ -176,7 +218,7 @@ z-index: 89;
  {
  width:40%;
  margin-right:8%;
-padding-top:5%;
+ padding-top:5%;
  float:left;
  min-width: 219px;
  }
