@@ -1,4 +1,14 @@
 *{margin:0 ;padding:0}
+@font-face
+{
+    font-family: lucida_regular;
+    src: url(../fonts/lucida_sans_unicode_regular.ttf);
+}
+@font-face
+{
+    font-family: algerian;
+    src: url(../fonts/algerian.TTF);
+}
 body
 {
 background-color: #6ADADF;
@@ -31,23 +41,43 @@ background-image:-ms-linear-gradient(top, #a8e9ff 0%, #ffffff 27%,#a8e9ff 96%);
  {
  list-style-type:none;
  display:inline;
- padding-right:20px;
+
  }
+p
+   {
+       line-height:normal;
+       color: #764e36;
+    font-family: lucida_regular;
+   }
+
  p span
  {
  font-family:Algerian;
  font-size:25px;
  line-height:normal;
  } 
- p 
- {
- line-height:normal;
- }
+
  a
  {text-decoration:none;
- color:#330000;
+ color:#500000;
  font-family:algerian;
+ padding:20px 15px 20px 15px;
  }
+
+a:hover
+ {
+ color:#c06733;
+ }
+ #paper a
+ {
+     font-size: 14px;
+ }
+.active
+{
+
+    color:#c06733;
+}
+
  #icons
  {
      display: inline-block;
@@ -106,6 +136,7 @@ background-image:-ms-linear-gradient(top, #a8e9ff 0%, #ffffff 27%,#a8e9ff 96%);
      min-width: 762px;
      margin-right: auto;
      margin-left: auto;
+     overflow: hidden;
  }
   .img_holder 
   {
@@ -138,7 +169,7 @@ z-index: 89;
      padding-left: 4%;
      display:inline-block;
    width:70%;
-   font-family: Lucida Sans Unicode;
+   font-family: lucida_regular;
    text-align: justify;
  }
  .text
