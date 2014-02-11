@@ -11,15 +11,25 @@
 }
 body
 {
-background-color: #6ADADF;
+background-color: #b4e1e8;
 font-size:11px;
-background-image:-moz-linear-gradient(top, #a8e9ff 0%, #ffffff 27%,#a8e9ff 96%);
-background-image:linear-gradient(top, #a8e9ff 0%, #ffffff 27%,#a8e9ff 96%);
-background-image:-webkit-linear-gradient(top, #a8e9ff 0%, #ffffff 27%,#a8e9ff 96%);
-background-image:-o-linear-gradient(top, #a8e9ff 0%, #ffffff 27%,#a8e9ff 96%);
-background-image:-ms-linear-gradient(top, #a8e9ff 0%, #ffffff 27%,#a8e9ff 96%);
- background-image:-webkit-gradient(linear, right top, right bottom, color-stop(0%,#a8e9ff), color-stop(27%,#ffffff),color-stop(96%,#a8e9ff));
- 
+background-image:-moz-linear-gradient(top, #b4e1e8 0%, #ffffff 17%,#b4e1e8 90%);
+background-image:linear-gradient(top, #b4e1e8 0%, #ffffff 17%,#b4e1e8 90%);
+background-image:-webkit-linear-gradient(top, #b4e1e8 0%, #ffffff 17%,#b4e1e8 90%);
+background-image:-o-linear-gradient(top, #b4e1e8 0%, #ffffff 17%,#b4e1e8 90%);
+background-image:-ms-linear-gradient(top, #b4e1e8 0%, #ffffff 17%,#b4e1e8 90%);
+ background-image:-webkit-gradient(linear, right top, right bottom, color-stop(0%,#b4e1e8), color-stop(17%,#ffffff),color-stop(90%,#b4e1e8));
+ }
+#panorama_body
+{
+background-color: #b4e1e8;
+font-size:11px;
+background-image:-moz-linear-gradient(top, #b4e1e8 0%, #ffffff 37%,#b4e1e8 96%);
+background-image:linear-gradient(top, #b4e1e8 0%, #ffffff 37%,#b4e1e8 96%);
+background-image:-webkit-linear-gradient(top, #b4e1e8 0%, #ffffff 37%,#b4e1e8 96%);
+background-image:-o-linear-gradient(top, #b4e1e8 0%, #ffffff 37%,#b4e1e8 96%);
+background-image:-ms-linear-gradient(top, #b4e1e8 0%, #ffffff 37%,#b4e1e8 96%);
+ background-image:-webkit-gradient(linear, right top, right bottom, color-stop(0%,#b4e1e8), color-stop(37%,#ffffff),color-stop(96%,#b4e1e8));
  }
 
  header
@@ -133,6 +143,14 @@ a:hover
  margin-right:auto;
  margin-top:3%;
  padding-bottom:4%;
+ }
+#frame_content_thumbs
+ {
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:3%;
+    padding-bottom:5%;
  }
  .slaider_container
  {

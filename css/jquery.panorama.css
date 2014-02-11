@@ -73,15 +73,17 @@
 }
 
 .panorama-area {
-	border: 2px solid white;
-	filter: alpha(opacity=20);
-	opacity: .2;
-	background: black;
+    font-family: algerian;
 	font-size: 100%;
 	cursor: pointer;
 	text-decoration: none;
 	color: white;
-	text-align: right;
+	text-align: center;
+}
+.panorama-area p{
+
+    font-family: algerian;
+    color: #500000;
 }
 .panorama-area-hover {
 	background: #0080e2;
@@ -93,15 +95,4 @@
 }
 .area1-hover {
 	background: #25bf5b;
-}
-.panorama-title {
- 	position: absolute; 
-	right: 0;
-	top: 0; 
-	font-size: 16px; 
-	font-family: Verdana;
-	background: gray;
-	padding: 3px;
-	filter: alpha(opacity=50);
-	opacity: .5;
 }
