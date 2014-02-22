@@ -5,4 +5,6 @@ $(document).ready(function(){
         infiniteLoop: false,
         hideControlOnEnd: true,
         pager: false
-    });})
+    });
+
+})
