@@ -34,11 +34,10 @@ background-image:-ms-linear-gradient(top, #b4e1e8 0%, #ffffff 37%,#b4e1e8 96%);
 
  header
  {
- width:98%;
 	margin-left:auto;
 	margin-right:auto;
- margin-top:2%;
- padding-bottom:3%;
+ margin-top:27px;
+ padding:0 14px 40px 14px;
  }
 
  header nav, header ul
@@ -121,54 +120,52 @@ a:hover
  {
   background-image:url("../images/paper.jpg");
   background-size:cover;
-  margin-top:-6%;  
+  background-position: top center;
+  margin-top:-6%;
   margin-bottom:-2%;
  }
  #frame nav
  {
- padding-top:6%;
+ padding-top:81px;
  }
  #frame nav, #frame nav ul
  {
- width:50%;
- margin-left:auto;
- margin-right:auto;
+ width:390px;
+ margin:0 auto;
  text-align:center;
  }
 
  #frame_content
  {
- width:100%;
   margin-left:auto;
  margin-right:auto;
- margin-top:3%;
- padding-bottom:4%;
+ margin-top:40px;
+ padding-bottom:54px;
  }
 #frame_content_thumbs
  {
-    width:100%;
     margin-left:auto;
     margin-right:auto;
-    margin-top:3%;
-    padding-bottom:5%;
+    margin-top:40px;
+    padding-bottom:67px;
  }
  .slaider_container
  {
-     width: 80%;
      min-width: 762px;
      margin-right: auto;
      margin-left: auto;
+     padding: 0 116px;
      overflow: hidden;
  }
  .thumbs
  {
-     width: 60%;
      min-width: 703px;
-
+     padding: 0 106px;
+     text-align: center;
  }
  .images
  {
-     margin-top: 2%;
+     margin-top: 18px;
  }
 .images a
  {
@@ -177,7 +174,8 @@ a:hover
  .thumb
  {
      display: inline-block;
-     margin-right: 9%;
+     margin-right: 42px;
+     margin-left: 42px;
  }
 .thumb .link_holder
  {
@@ -193,8 +191,7 @@ a:hover
  }
 .thumb .img_holder
  {
-    min-width: 161px;
-    width:24%;
+    width:161px;
 }
 
 .images .img_holder:last-child
@@ -205,11 +202,16 @@ a:hover
   {
   display:inline-block;
   position: relative;
-  width:25%;
-  min-width: 190px;
-      z-index: 90
+  width:229px;
+  z-index: 90
   }
-
+.img_holder .hold
+{
+    padding-top: 82%;
+    background-image:url("../images/frame.png");
+    background-size:cover;
+    z-index: 89;
+}
 .image_div
   {
     position: absolute;
@@ -221,28 +223,25 @@ a:hover
   background-size:cover;
     z-index: -1;
 }
- .img_holder .hold
- {
-     padding-top: 82%;
-background-image:url("../images/frame.png");
-background-size:cover;
-z-index: 89;
- }
+
  .texts
  {
-     padding-left: 4%;
+     padding-left: 37px;
      display:inline-block;
    width:70%;
    font-family: lucida_regular;
-   text-align: justify;
+     text-align: center;
+
  }
  .text
  {
+     display: inline-block;
  width:40%;
  margin-right:8%;
  padding-top:5%;
- float:left;
  min-width: 219px;
+ text-align: justify;
+
  }
  .text:first-child
  {
@@ -265,7 +264,7 @@ z-index: 89;
 .img_holder
 {
     display: block;
-    width: 80%;
+    width: 546px;
     margin-right: auto;
     margin-left: auto;
 }
