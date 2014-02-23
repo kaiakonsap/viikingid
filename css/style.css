@@ -76,7 +76,7 @@ a:hover
  {
  color:#c06733;
  }
- #paper nav a
+ .paper nav a
  {
      font-size: 14px;
  }
@@ -112,7 +112,7 @@ a:hover
  width:100%;
  height:auto;
  }
- #frame #paper
+ #frame .paper
  {
   background-image:url("../images/paper.jpg");
   background-size:cover;
@@ -120,6 +120,10 @@ a:hover
   margin-top:-6%;
   margin-bottom:-2%;
  padding:0 50px;
+  }
+#frame #paper2
+ {
+  margin-bottom:-4%;
   }
  #frame nav
  {
@@ -164,8 +168,6 @@ right:0;
 }
  .thumbs
  {
-     min-width: 703px;
-     text-align: center;
      margin-top:40px;
      padding-bottom:67px;
  }
@@ -240,16 +242,26 @@ right:0;
 
 }
 
-#owl1 .item{
+.owl-carousel .item{
     padding: 30px 0px;
     margin: 10px;
     text-align: center;
 }
-#owl2 .item{
-    padding: 30px 0px;
-    margin: 10px;
-    text-align: center;
+#owl3 .item{
+    padding: 15px;
+    padding: 0;
+    text-align: left;
 }
+#owl3 .item .item_container{
+   display: inline-block;
+}
+#owl3 .item .text{
+    padding-top: 20px;
+}
+#owl3 .item .img_holder{
+    width:  200px;
+}
+
 .customNavigation{
     text-align: center;
 }
