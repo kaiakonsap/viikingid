@@ -119,7 +119,8 @@ a:hover
   background-position: top center;
   margin-top:-6%;
   margin-bottom:-2%;
- }
+ padding:0 50px;
+  }
  #frame nav
  {
  padding-top:81px;
@@ -135,6 +136,7 @@ a:hover
  margin-right:auto;
  margin-top:40px;
  padding-bottom:54px;
+ position: relative;
  }
 
 
@@ -147,11 +149,11 @@ a:hover
     right:0;
     display: block;
 }
-.customNavigation .prev
+.customNavigation .prev img
 {
 left:0;
 }
-.customNavigation .next
+.customNavigation .next img
 {
 right:0;
 }
@@ -220,6 +222,8 @@ right:0;
  .text
  {
  text-align: justify;
+ max-width: 350px;
+ display: inline-block;
  }
 
 .text p, .text span
@@ -232,36 +236,8 @@ right:0;
  }
 @media screen and (max-width:827px)
 {
-.img_holder
-{
-    display: block;
-    width: 546px;
-    margin-right: auto;
-    margin-left: auto;
-}
-    .slaider_container
-    {
-        min-width: 100px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    .texts
-    {
-        clear: both;
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        min-width: 219px;
-    }
-    .text
-    {
-        clear: both;
-        display: block;
-        width: 80%;
-        margin-right: auto;
-        margin-left: auto;
-        min-width: 219px;
-    }
+
+
 }
 
 #owl1 .item{
