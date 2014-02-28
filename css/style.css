@@ -156,29 +156,6 @@ a:hover
  position: relative;
  }
 
-
-
-.customNavigation
-{
-    position: absolute;
-    top: 40%;
-    left:0;
-    right:0;
-    display: block;
-}
-.customNavigation .prev img
-{
-left:0;
-}
-.customNavigation .next img
-{
-right:0;
-}
-
-.customNavigation img
-{
-          width:22px;
-}
  .thumbs
  {
      margin-top:40px;
@@ -212,7 +189,8 @@ right:0;
   display:inline-block;
   position: relative;
   width:229px;
-  z-index: 90
+  z-index: 90;
+  vertical-align: top;
   }
 .img_holder .hold
 {
@@ -234,12 +212,6 @@ right:0;
 }
 
 
- .text
- {
- text-align: justify;
- max-width: 350px;
- display: inline-block;
- }
  .text .title
  {
      margin-bottom: 20px;
@@ -253,11 +225,36 @@ right:0;
  {
     line-height:inherit;
  }
+ 
+
+  #texts
+   {
+   display:inline-block;
+
+font-family: Lucida Sans Unicode;
+text-align: left;
+   }
+   .text
+   {
+   text-align: justify;
+
+   margin-right:20px;
+    max-width: 350px;
+	display:inline-block;
+	vertical-align: top;
+ }
+.text:first-child
+  {
+      margin-top: -4px;
+ }
+
+ 
 @media screen and (max-width:827px)
 {
 
 
 }
+
 
 .owl-carousel .item{
     padding: 30px 0px;
@@ -267,7 +264,6 @@ right:0;
 #owl3 .item{
     padding: 15px;
     padding: 0;
-    text-align: left;
 }
 #owl3 .item .item_container{
    display: inline-block;
@@ -288,18 +284,7 @@ right:0;
 
 }
 
-.customNavigation{
-    text-align: center;
-}
 
-.customNavigation a{
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
 #googleMap
 {
     display: block;
