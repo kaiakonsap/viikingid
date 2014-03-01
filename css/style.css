@@ -131,13 +131,10 @@ a:hover
   background-size:cover;
   background-position: top center;
   margin-top:-6%;
-  margin-bottom:-2%;
+  margin-bottom:-3%;
  padding:0 50px;
   }
-#frame #paper2
- {
-  margin-bottom:-4%;
-  }
+
  #frame nav
  {
  padding-top:81px;
@@ -151,14 +148,17 @@ a:hover
  {
   margin-left:auto;
  margin-right:auto;
- margin-top:40px;
- padding-bottom:54px;
+ margin-top:10px;
  position: relative;
+ text-align: center;
  }
-
+.contact_content
+{
+     padding: 40px;
+}
  .thumbs
  {
-     margin-top:40px;
+     margin-top:10px;
      padding-bottom:67px;
  }
 
@@ -181,16 +181,21 @@ a:hover
  }
 .thumb .img_holder
  {
-    width:161px;
+    width:200px;
 }
 
   .img_holder 
   {
   display:inline-block;
   position: relative;
-  width:229px;
+  width:270px;
   z-index: 90;
-  vertical-align: top;
+  vertical-align: text-bottom;
+  margin: 0 0 20px 40px;
+  }
+.img_holder:first-child
+  {
+  margin: 0 0 20px 0;
   }
 .img_holder .hold
 {
@@ -198,6 +203,10 @@ a:hover
     background-image:url("../images/frame.png");
     background-size:cover;
     z-index: 89;
+}
+.thumb .img_holder
+{
+    margin-bottom: 0;
 }
 .image_div
   {
@@ -225,33 +234,45 @@ a:hover
  {
     line-height:inherit;
  }
- 
 
-  #texts
-   {
-   display:inline-block;
-
-font-family: Lucida Sans Unicode;
-text-align: left;
-   }
    .text
    {
+   font-family: Lucida Sans Unicode;
    text-align: justify;
-
-   margin-right:20px;
-    max-width: 350px;
+   margin-left:20px;
+     max-width: 370px;
 	display:inline-block;
 	vertical-align: top;
+    margin-top: 15px;
  }
-.text:first-child
-  {
-      margin-top: -4px;
- }
+
+.first_line
+   {
+    margin-top: 11px;
+}
 
  
-@media screen and (max-width:827px)
+@media screen and (max-width:1140px)
 {
 
+      .text
+    {
+         width: auto;
+        display: block;
+        margin: 0 auto;
+        padding-top: 0;
+    }
+
+}
+@media screen and (max-width:992px)
+{
+
+      .text
+    {
+         width: auto;
+        display: block;
+        margin: 0 auto;
+    }
 
 }
 
@@ -261,29 +282,6 @@ text-align: left;
     margin: 10px;
     text-align: center;
 }
-#owl3 .item{
-    padding: 15px;
-    padding: 0;
-}
-#owl3 .item .item_container{
-   display: inline-block;
-}
-#owl3 .item .text{
-    padding-top: 20px;
-}
-#owl3 .item .img_holder{
-    width:  200px;
-}
-#owl4 .item{
-   text-align: center;
-    padding: 0;
-    overflow: hidden;
-}
-#owl4 .item .text{
-    overflow: hidden;
-
-}
-
 
 #googleMap
 {
@@ -291,10 +289,10 @@ text-align: left;
     height: 250px;
     box-shadow: 0px -2px 2px rgba(34,34,34,0.6);
 }
+
 #contact
 {
-    display: block;
-   margin: 0 auto;
+  min-width:260px;
 }
 #contact p
 {
