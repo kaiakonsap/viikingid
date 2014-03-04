@@ -264,6 +264,7 @@ a:hover
     }
 
 }
+
 @media screen and (max-width:992px)
 {
 
@@ -274,6 +275,22 @@ a:hover
         margin: 0 auto;
     }
 
+}
+@media screen and (max-width:550px)
+{
+
+      .owl-carousel .item
+    {
+        margin:18px !important;
+    }
+	.img_holder 
+	{
+		width: 100%;
+	}
+	.frame
+	{
+	display:none;
+	}
 }
 
 
