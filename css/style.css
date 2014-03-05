@@ -276,6 +276,20 @@ a:hover
     }
 
 }
+@media screen and (max-width:720px)
+{
+
+	.img_holder,.img_holder:first-child
+	{
+		display:block;
+		margin: 10px auto;
+	}
+	.img_holder,.img_holder:nth-child(2)
+	{
+		display:none;
+	}
+
+}
 @media screen and (max-width:550px)
 {
 
@@ -291,11 +305,74 @@ a:hover
 	{
 	display:none;
 	}
+	#frame .paper 
+	{
+	padding:0;
+	}
+	.thumb
+	{
+		display: block;
+	}
+	.img_holder 
+	{
+		width: 100%;
+	}
+	.thumb .img_holder {
+		width: 100%;
+		max-width: 260px;
+		}
+		.img_holder .hold 
+		{
+		background-image: none;
+		}
+		.image_div {
+		
+		top: 0;
+		left: 0;
+		bottom: 5%;
+		right: 0;
+		}
+		nav, header nav
+		{
+		display: block;
+		margin: 0 auto;
+		}
+
+		nav ul li {
+		display: inline-block;
+		margin: 10px auto;
+		width: 100%;
+		text-align: center;
+		}
+		#icons {
+		display: block;
+		float: none;
+		margin: 10px auto;
+		text-align: center;
+		}
+		#icons img:first-child{
+		padding-left: 0;
+		}
+		#contact
+		{
+			margin-bottom: 20px;
+		}
+		.contact_content
+		{
+			 padding: 0;
+		}
+		.left,.right {
+		float: none;
+		display:block;
+		}
+		.left {
+		font-weight: bold;
+		}
 }
 
 
 .owl-carousel .item{
-    padding: 30px 0px;
+    padding: 30px 23px;
     margin: 10px;
     text-align: center;
 }
@@ -310,6 +387,10 @@ a:hover
 #contact
 {
   min-width:260px;
+}
+.contact_holder
+{
+ display: inline-block;
 }
 #contact p
 {

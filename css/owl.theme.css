@@ -34,6 +34,22 @@ right: -34px;
 	background-image: url("../images/arrow-right.png");
 	background-repeat: no-repeat;
 }
+@media screen and (max-width:550px)
+{
+
+	.owl-theme .owl-controls .owl-buttons .owl-prev{
+	left: 0;
+		background-image: url("../images/arrow-left_small.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	.owl-theme .owl-controls .owl-buttons .owl-next{
+	right: 0;
+		background-image: url("../images/arrow-right_small.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+}
 /* Clickable class fix problem with hover on touch devices */
 /* Use it for non-touch hover action */
 .owl-theme .owl-controls.clickable .owl-buttons div:hover{
