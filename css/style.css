@@ -44,6 +44,10 @@ background-image:-ms-linear-gradient(top, #b4e1e8 0%, #ffffff 37%,#b4e1e8 96%);
  {
  display:inline-block;
  }
+ header nav
+ {
+ padding-left:20px;
+ }
 
  nav ul li
  {
@@ -51,10 +55,7 @@ background-image:-ms-linear-gradient(top, #b4e1e8 0%, #ffffff 37%,#b4e1e8 96%);
  display:inline;
 
  }
- .left
- {
-     float: left;
- }
+
 .right
  {
      float: right;
@@ -152,10 +153,10 @@ a:hover
  position: relative;
  text-align: center;
  }
-.contact_content
-{
-     padding: 40px;
-}
+		.contact_content
+		{
+		padding: 40px;
+		}
  .thumbs
  {
      margin-top:10px;
@@ -245,6 +246,17 @@ a:hover
 	vertical-align: top;
     margin-top: 15px;
  }
+ 
+ .center
+ {
+ vertical-align: middle;
+ }
+ .small
+ {
+ max-width: 195px;
+ margin-top: 0;
+ margin-left: 50px;
+ }
 
 .first_line
    {
@@ -252,6 +264,56 @@ a:hover
 }
 
  
+@media screen and (min-width:1400px) and (min-height: 800px) 
+{
+
+ .img_holder
+	 {
+	width: 330px;
+	}
+
+	#frame nav {
+	padding-top: 115px;
+	}
+	.owl-carousel .item 
+	{
+	padding: 50px 23px !important;
+	}
+	.slaider_container {
+	padding: 0 33px 95px 33px !important;
+	}
+	#icons img {
+	width: 25px;
+	}
+	.contact_content
+	{
+	margin-top:20px !important;
+	}
+	.img_holder
+	{
+		margin-left: 60px;
+	}
+}
+@media screen and (min-width:1400px)
+{
+
+	.img_holder
+	{
+		margin-left: 60px;
+	}
+	 .small
+	 {
+	 margin-left: 60px;
+	 }
+}
+
+@media screen and (min-width:1160px) and (min-height: 700px) 
+{
+  	.owl-carousel .item 
+	{
+	margin: 25px 0 !important;
+	}
+}
 @media screen and (max-width:1140px)
 {
 
@@ -262,6 +324,10 @@ a:hover
         margin: 0 auto;
         padding-top: 0;
     }
+		.contact
+		{
+		width:370px;
+		}
 
 }
 
@@ -276,7 +342,7 @@ a:hover
     }
 
 }
-@media screen and (max-width:720px)
+@media screen and (max-width:830px)
 {
 
 	.img_holder,.img_holder:first-child
@@ -308,6 +374,10 @@ a:hover
 	#frame .paper 
 	{
 	padding:0;
+	margin:0;
+	}
+	#frame nav {
+	padding-top: 8px;
 	}
 	.thumb
 	{
@@ -355,8 +425,9 @@ a:hover
 		}
 		#contact
 		{
-			margin-bottom: 20px;
+			padding: 0 10px 20px 10px;
 		}
+	
 		.contact_content
 		{
 			 padding: 0;
@@ -384,14 +455,12 @@ a:hover
     box-shadow: 0px -2px 2px rgba(34,34,34,0.6);
 }
 
-#contact
+.contact
 {
   min-width:260px;
+		margin-top:0;
 }
-.contact_holder
-{
- display: inline-block;
-}
+
 #contact p
 {
     display: block;
