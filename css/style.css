@@ -60,7 +60,12 @@ background-image:-ms-linear-gradient(top, #b4e1e8 0%, #ffffff 37%,#b4e1e8 96%);
  {
      float: right;
  }
-p
+ .small_frame
+	{
+	display:none;
+	}
+
+	p
    {
        line-height:normal;
        color: #764e36;
@@ -384,6 +389,7 @@ a:hover
 	{
 	padding:0;
 	margin:0;
+	background-image: url("../images/paper.png");
 	}
 	#frame nav {
 	padding-top: 8px;
