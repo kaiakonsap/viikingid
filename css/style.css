@@ -308,6 +308,10 @@ position:relative;
 	 {
 	width: 330px !important;
 	}
+	.thumb .frame_wrap
+	 {
+	width: 200px !important;
+	}
 	.img_wrap
 	{
 	margin: 54px 32px 51px 32px;
