@@ -54,7 +54,7 @@
 }
 
 /* mouse grab icon */
-.grabbing { 
+.grabbing,.owl-carousel { 
     cursor:url(../images/grabbing.png) 8 8, move;
 }
 

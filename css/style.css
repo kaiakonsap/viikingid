@@ -9,7 +9,7 @@
     font-family: algerian;
     src: url(../fonts/algerian.woff);
 }
-body
+html
 {
 background-color: #b4e1e8;
 font-size:11px;
@@ -495,6 +495,22 @@ position:relative;
 		{
 			padding: 0 10px 20px 10px;
 		}
+		.contact
+			{
+			display:block;
+			width:100% !important;
+			margin:0;
+			}
+			.contact, .contact:first-child {
+				display: block;
+				margin: 15px 0 0 0;
+				}
+			.contact .img_wrap
+			{
+			display:block;
+			  width:100% !important;
+			  margin:0;
+			}
 	
 		.contact_content
 		{
@@ -542,7 +558,7 @@ display: inline-block;
 .contact
 {
   width:260px;
-margin-top:0;
+
 }
 .contact .img_wrap
 {
