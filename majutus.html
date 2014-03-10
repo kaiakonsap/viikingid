@@ -8,7 +8,6 @@
     <link href="css/owl.carousel.css" type="text/css" rel="stylesheet" media="screen"/>
     <link href="css/owl.theme.css" type="text/css" rel="stylesheet" media="screen"/>
     <link href="css/owl.transitions.css" type="text/css" rel="stylesheet" media="screen"/>
-
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/main.js"></script>
 
@@ -22,26 +21,33 @@
 <body>
 <div id="container">
     <header>
-        <nav>
-            <ul>
+		<div id="icons">
+            <img src="images/lang.png" alt="language"/>
+            <img src="images/fb.png" alt="like us in facebook"/>
+        </div>
+		<button type="button" class="navbar-toggle">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		 </button>
+
+      <div class="navbar-collapse">
+			<ul class="nav navbar-nav">
                 <li><a href="#">viikingite külast</a></li>
                 <li><a href="meelelahutus.html">meelelahutus</a></li>
                 <li><a class="active" href="#">majutus</a></li>
                 <li><a href="pildid.html">pildid</a></li>
                 <li><a href="kontakt.html">kontakt</a></li>
             </ul>
-        </nav>
-        <div id="icons">
-            <img src="images/lang.png"/>
-            <img src="images/fb.png"/>
-        </div>
+		</div>
+       
     </header>
     <div class="wrapper">
         <div id="frame">
-            <img class="frame" src="images/top_frame.png"/>
-
+            <img class="frame" src="images/top_frame.png" alt="frame"/>
             <div class="paper">
-                <nav>
+                <nav class="nav">
                     <ul>
                         <li><a class="active" href="#">Peoruumid</a></li>
                         <li><a href="#">seminarid</a></li>
@@ -49,23 +55,23 @@
                 </nav>
                 <div id="frame_content">
                     <div id="owl2" class="owl-carousel owl-theme">
+  
+
                         <div class="item">
-   
-                                <div class="img_holder center">
-                                    <div class="hold"></div>
-                                    <div class="image_div">
-                                    </div>
-                                </div>
-								<div class="img_holder center">
+
+                            <div class="img_holder center">
                                 <div class="hold"></div>
                                 <div class="image_div">
                                 </div>
-								</div>
-
+                            </div>
+                            <div class="img_holder center">
+                                <div class="hold"></div>
+                                <div class="image_div">
+                                </div>
+                            </div>
 									<div class="text small center">
-                                    <p><span>V</span>äiksema seltskonnaga saate nautida õdusat olemist Ülakorruse Nurgakeses.
-                                        Ülakorrusele mahub kuni 20 inimeseline seltkond.  </p>
-									</div>
+                                <p><span>K</span>uni 25 inimest mahutab taverna väike saal. Saal asub mugavalt taverna esimesel korrusel.   </p>
+								</div>
 
 
                         </div>
@@ -117,11 +123,54 @@
                         </div>
 
                     </div>
+					<noscript>
+					Your browser does not support JavaScript!
+					<div class="item">
+   
+                                <div class="img_holder center">
+                                    <div class="hold"></div>
+                                    <div class="image_div" id="img1">
+                                    </div>
+                                </div>
+								<div class="img_holder center">
+                                <div class="hold"></div>
+                                <div class="image_div" id="img2">
+                                </div>
+								</div>
 
+									<div class="text small center">
+                                    <p><span>V</span>äiksema seltskonnaga saate nautida õdusat olemist Ülakorruse Nurgakeses.
+                                        Ülakorrusele mahub kuni 20 inimeseline seltkond.  </p>
+									</div>
+
+
+                        </div>
+						<div class="item">
+   
+                                <div class="img_holder center">
+                                    <div class="hold"></div>
+                                    <div class="image_div" id="img1">
+                                    </div>
+                                </div>
+								<div class="img_holder center">
+                                <div class="hold"></div>
+                                <div class="image_div" id="img2">
+                                </div>
+								</div>
+
+									<div class="text small center">
+                                    <p><span>V</span>äiksema seltskonnaga saate nautida õdusat olemist Ülakorruse Nurgakeses.
+                                        Ülakorrusele mahub kuni 20 inimeseline seltkond.  </p>
+									</div>
+                        </div>
+						
+					
+					
+					</noscript>
 
                 </div>
             </div>
-            <img class="frame" src="images/bottom_frame.png"/>
+            <img class="frame" src="images/bottom_frame.png" alt="frame"/>
         </div>
     </div>
 </div>

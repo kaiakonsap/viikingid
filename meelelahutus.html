@@ -8,9 +8,8 @@
     <link href="css/owl.carousel.css" type="text/css" rel="stylesheet" media="screen"/>
     <link href="css/owl.theme.css" type="text/css" rel="stylesheet" media="screen"/>
     <link href="css/owl.transitions.css" type="text/css" rel="stylesheet" media="screen"/>
-
     <script src="js/jquery-1.10.2.min.js"></script>
-
+   <script src="js/main.js"></script>
     <script src="js/owl-carousel/owl.carousel.js"></script>
     <script src="js/owl.js"></script>
     <!--[if lt IE 9]>
@@ -21,26 +20,34 @@
 <body>
 <div id="container">
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">viikingite külast</a></li>
-                <li><a class="active" href="#">meelelahutus</a></li>
-                <li><a href="majutus.html">majutus</a></li>
-                <li><a href="pildid.html">pildid</a></li>
-                <li><a href="kontakt.html">kontakt</a></li>
-            </ul>
-        </nav>
-        <div id="icons">
+		<div id="icons">
             <img src="images/lang.png"/>
             <img src="images/fb.png"/>
         </div>
+ 		<button type="button" class="navbar-toggle">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		 </button>
+
+      <div class="navbar-collapse">
+			<ul class="nav navbar-nav">
+                <li><a href="#">viikingite külast</a></li>
+                <li><a class="active" href="meelelahutus.html">meelelahutus</a></li>
+                <li><a  href="majutus.html">majutus</a></li>
+                <li><a href="pildid.html">pildid</a></li>
+                <li><a href="kontakt.html">kontakt</a></li>
+            </ul>
+		</div>
+    
     </header>
     <div class="wrapper">
          <div id="frame">
         <img class="frame" src="images/top_frame.png"/>
 
         <div id="paper" class="paper">
-            <nav>
+            <nav class="nav">
                 <ul>
                     <li><a class="active" href="#">mängud</a></li>
                     <li><a href="#">ajalooline</a></li>
