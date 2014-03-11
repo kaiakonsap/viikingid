@@ -482,14 +482,15 @@ position:relative;
 
       .owl-carousel .item
     {
-        margin:40px !important;
-		padding-left:0  !important;
-		padding-right:0  !important;
+        margin:0 !important;
+		padding-left:40px  !important;
+		padding-right:40px  !important;
     }
 	.frame_wrap 
 	{
 		width: 100%;
 	}
+
 	.frame
 	{
 	display:none;
@@ -503,13 +504,13 @@ position:relative;
 	
 	.thumb
 	{
-		display: block;
+		display: block;	
 	}
 
 	.thumb .frame_wrap {
 		width: 100%;
 		max-width: 260px;
-
+	
 		}
 		.frame_wrap:before {
 		background-image:none ;
@@ -539,6 +540,8 @@ position:relative;
 			display:block;
 			  width:100% !important;
 			  margin:0;
+			  border-top: 1px dashed #c06733;
+			border-bottom: 1px dashed #c06733;
 			}
 	
 		.contact_content
@@ -679,4 +682,12 @@ text-align:left;
 display:inline;
 list-style-type: none;
 padding-top: 10px;
+}
+h1
+{
+
+padding:100px 0;
+font-size:20px;
+text-transform:uppercase;
+color:#500000;
 }
