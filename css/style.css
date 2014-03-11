@@ -412,7 +412,7 @@ position:relative;
 
 
 }
-@media screen and (max-width:550px)
+@media screen and (max-width:600px)
 {	
 	header
 	{
@@ -436,48 +436,13 @@ position:relative;
 	{
 	padding:0 !important;
 	}
-      .owl-carousel .item
-    {
-        margin:40px !important;
-		padding-left:0  !important;
-		padding-right:0  !important;
-    }
-	.frame_wrap 
-	{
-		width: 100%;
-	}
-	.frame
-	{
-	display:none;
-	}
-	#frame .paper 
-	{
-	padding:0;
-	margin:0;
-	background-image: url("../images/paper2.png");
-	}
+	.navbar-toggle {
+		display: inline-block !important;
+		}
 	#frame .nav {
 	padding-top: 8px;
 	}
-	.thumb
-	{
-		display: block;
-	}
-
-	.thumb .frame_wrap {
-		width: 100%;
-		max-width: 260px;
-
-		}
-		.frame_wrap:before {
-		background-image:none ;
-		}
-
-		.thumb .frame_wrap .img_wrap {
-			margin: 0;
-			height:150px;
-			}
-		.nav, header .nav
+			.nav, header .nav
 		{
 		display: block;
 		margin: 0 auto;
@@ -506,6 +471,55 @@ position:relative;
 		#icons img:first-child{
 		padding-left: 0;
 		}
+		.navbar-collapse
+		{
+		display:none;
+		}
+}
+
+@media screen and (max-width:550px)
+{	
+
+      .owl-carousel .item
+    {
+        margin:40px !important;
+		padding-left:0  !important;
+		padding-right:0  !important;
+    }
+	.frame_wrap 
+	{
+		width: 100%;
+	}
+	.frame
+	{
+	display:none;
+	}
+	#frame .paper 
+	{
+	padding:0;
+	margin:0;
+	background-image: url("../images/paper2.png");
+	}
+	
+	.thumb
+	{
+		display: block;
+	}
+
+	.thumb .frame_wrap {
+		width: 100%;
+		max-width: 260px;
+
+		}
+		.frame_wrap:before {
+		background-image:none ;
+		}
+
+		.thumb .frame_wrap .img_wrap {
+			margin: 0;
+			height:150px;
+			}
+
 		#contact
 		{
 			padding: 0 10px 20px 10px;
@@ -540,10 +554,7 @@ position:relative;
 		.left {
 		font-weight: bold;
 		}
-		.navbar-collapse
-		{
-		display:none;
-		}
+	
 }
 
 
@@ -594,20 +605,17 @@ display: inline-block;
 
 
 
-@media (min-width:550px)
-{
-.navbar-toggle {
-display: none;
-}
-.navbar-collapse.collapse {
-display: inline !important;
-}
-.navbar-nav li
-{
-display:inline-block !important;
 
-}
-}
+
+	.navbar-nav li
+	{
+	display:inline-block ;
+	}
+	
+		.navbar-collapse.collapse {
+		display: inline;
+		}
+
 .sr-only {
 position: absolute;
 width: 1px;
@@ -621,7 +629,9 @@ border: 0;
 .navbar-inverse .navbar-toggle .icon-bar {
 background-color: white;
 }
-
+.navbar-toggle {
+display: none;
+}
 .navbar-toggle .icon-bar {
 display: block;
 width: 22px;
@@ -666,7 +676,7 @@ text-align:left;
 
 .navbar-nav li
 {
-display:block;
+display:inline;
 list-style-type: none;
 padding-top: 10px;
 }

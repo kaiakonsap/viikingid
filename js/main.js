@@ -41,10 +41,10 @@ var currentTallest = 0,
 $( document ).ready(function() {
 	$(window).resize(function() {
 		panelSize();
-		if($(window).width() >= 550 && !$('.navbar-collapse').is(':visible')) {
+		if($(window).width() >= 600 && !$('.navbar-collapse').is(':visible')) {
 		$('.navbar-collapse').slideDown('fast');
 		}
-		if($(window).width() < 550 && !$('.navbar-collapse').is(':hidden'))
+		if($(window).width() < 600 && !$('.navbar-collapse').is(':hidden'))
 		{
 		$('.navbar-collapse').slideUp('fast');
 		}
