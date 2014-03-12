@@ -634,19 +634,19 @@ overflow:hidden;
     text-align: center;
 }
 
-#googleMap
+#map img
 {
     display: block;
-    height: 250px;
-    box-shadow: 0px -2px 2px rgba(34,34,34,0.6);
+    width: 100%;
 }
 #map
 {
 overflow:hidden;
 width:330px;
-height:300px;
 display: inline-block;
+vertical-align:middle;
 }
+
 form
 {
 display: inline-block;
@@ -654,7 +654,7 @@ display: inline-block;
 .contact
 {
   width:260px;
-
+vertical-align:middle;
 }
 .contact .img_wrap {
 width: 100%;
