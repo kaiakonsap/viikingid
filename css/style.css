@@ -20,6 +20,8 @@ background-image:-webkit-linear-gradient(top, #b4e1e8 0%, #ffffff 17%,#b4e1e8 90
 background-image:-o-linear-gradient(top, #b4e1e8 0%, #ffffff 17%,#b4e1e8 90%);
 background-image:-ms-linear-gradient(top, #b4e1e8 0%, #ffffff 17%,#b4e1e8 90%);
  background-image:-webkit-gradient(linear, right top, right bottom, color-stop(0%,#b4e1e8), color-stop(17%,#ffffff),color-stop(90%,#b4e1e8));
+ background-repeat:no-repeat;
+background-attachment:fixed;
  }
 #panorama_body
 {
@@ -531,7 +533,7 @@ position:relative;
 			{
 				margin: 37px 0 0 0;
 			}
-			.img_wrap{
+			.item .img_wrap{
 				border: 6px double #edb742;
 				/* Safari and Chrome */
 				-webkit-border-image-source: url(../images/border-image-2.png); 
