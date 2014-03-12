@@ -11,6 +11,7 @@
 }
 html
 {
+width:100%;
 background-color: #b4e1e8;
 font-size:11px;
 background-image:-moz-linear-gradient(top, #b4e1e8 0%, #ffffff 17%,#b4e1e8 90%);
@@ -208,7 +209,7 @@ a:hover
 	height: 100px;
 }
 
-.frame-wrap:first-child
+.frame_wrap:first-child
   {
   margin: 0 0 20px 0;
   }
@@ -288,7 +289,7 @@ position:relative;
  }
  .small
  {
- max-width: 195px;
+ max-width: 270px;
  margin-top: 0;
  margin-left: 50px;
  }
@@ -315,6 +316,11 @@ position:relative;
 	margin: 54px 32px 51px 32px;
 	height: 167px;
 	}
+	 .small
+		 {
+		 max-width: 330px;
+		 }
+
 	.contact .img_wrap {
 		width: 253px !important;
 		}
@@ -391,15 +397,16 @@ position:relative;
         display: block;
         margin: 0 auto;
     }
-	.frame_wrap
-	{
-	margin: 0 0 20px 0;
-	}
+
 
 }
 @media screen and (max-width:830px)
 {
 
+	.frame_wrap
+	{
+	margin: 0 0 20px 0;
+	}
 	.frame_wrap,.frame_wrap:first-child
 	{
 		display:block;
@@ -520,6 +527,47 @@ position:relative;
 			margin: 0;
 			height:150px;
 			}
+			.img_wrap
+			{
+				margin: 37px 0 0 0;
+			}
+			.img_wrap{
+				border: 6px double #edb742;
+				/* Safari and Chrome */
+				-webkit-border-image-source: url(../images/border-image-2.png); 
+				-webkit-border-image-slice: 28; 
+				-webkit-border-image-width: 0.8em; 
+				-webkit-border-image-outset: 0; 
+				-webkit-border-image-repeat: round; 
+
+				/* Firefox */
+				-moz-border-image-source: url(../images/border-image-2.png); 
+				-moz-border-image-slice: 28; 
+				-moz-border-image-width: 0.8em; 
+				-moz-border-image-outset: 0; 
+				-moz-border-image-repeat: round; 
+
+				/* Internet Explorer */
+				-ms-border-image-source: url(../images/border-image-2.png); 
+				-ms-border-image-slice: 28; 
+				-ms-border-image-width: 0.8em; 
+				-ms-border-image-outset: 0; 
+				-ms-border-image-repeat: round; 
+
+				/* Opera */
+				-o-border-image-source: url(../images/border-image-2.png); 
+				-o-border-image-slice: 28; 
+				-o-border-image-width: 0.8em; 
+				-o-border-image-outset: 0; 
+				-o-border-image-repeat: round; 
+
+				/* CSS3 */
+				border-image-source: url(../images/border-image-2.png); 
+				border-image-slice: 28; 
+				border-image-width: 0.8em; 
+				border-image-outset: 0; 
+				border-image-repeat: round; 
+				}
 
 		#contact
 		{
