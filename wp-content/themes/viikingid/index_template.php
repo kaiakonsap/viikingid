@@ -1,0 +1,19 @@
+<?php /* Template Name: index template */ get_header("header1"); ?>
+
+	<main role="main">
+
+    <div class="wrapper panorama">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/panoraam2.png" class="advancedpanorama" width="3220" height="508" usemap="testmap" alt="Atelier du sculpteur" />
+        <map id="testmap" name="testmap">
+            <area shape="rect" coords="1653,72,1839,255" href="index.html" alt="viikingite külast" />
+            <area shape="rect" coords="1950,114,2081,210" href="<?php echo get_template_directory_uri(); ?>/img/test.jpg" alt="meelelahutus" />
+            <area shape="rect" coords="1920,276,2070,351" href="<?php echo get_template_directory_uri(); ?>/img/test.jpg" alt="kontakt"  />
+        </map>
+    </div>
+<?php get_footer("footer1"); ?>
+</div>
+
+	</main>
+
+
+
