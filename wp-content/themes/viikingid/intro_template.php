@@ -29,8 +29,7 @@
 
 		
                 <div id="owl2" class="owl-carousel owl-theme">
-						<div class="item">
-				
+
 											<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 									<?php the_content(); ?>
@@ -49,7 +48,7 @@
 								<!-- /article -->
 
 							<?php endif; ?>
-						</div>
+
 
 
 

@@ -95,16 +95,11 @@ $div_content = apply_filters('the_content',$content);
 	return ' <div class="item">' .$div_content. '</div>';
 }
 function img( $atts, $content = null ) {
-add_filter('the_content', 'filter_ptags_on_images');
 $div_content = apply_filters('the_content',$content);
 	return '    <div class="frame_wrap center">
 					<div class="img_wrap"> ' .$div_content. '</div></div>';
 }
-function filter_ptags_on_images()
-{
-preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 
-}
 function text( $atts, $content = null ) {
 $div_content = apply_filters('the_content',$content);
 	return '<div class="text">' .$div_content. '</div>';
