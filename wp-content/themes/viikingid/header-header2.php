@@ -21,7 +21,7 @@
 
 
 	</head>
-	<body <?php body_class(); ?> id="panorama_body">
+	<body <?php body_class(); ?>>
 
 		<!-- wrapper -->
 		<div id="container">

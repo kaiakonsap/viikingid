@@ -14,7 +14,7 @@ $(document).ready(function(){
     });
 
     owl2.owlCarousel({
-                pagination : false,
+        pagination : false,
 		navigation: true,
         singleItem:true
     });

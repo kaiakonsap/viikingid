@@ -1,67 +1,58 @@
-<?php get_header(); ?>
+<?php get_header("header2"); ?>
 
-	<main role="main">
-	<!-- section -->
-	<section>
+<div class="wrapper">
+         <div id="frame">
+        <img class="frame" src="<?php echo get_template_directory_uri(); ?>/img/top_frame.png" alt="frame"/>
 
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <div id="paper" class="paper">
+            <nav class="nav">
+			<?php
 
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		$children = wp_list_pages("title_li=&depth=1&child_of=".MEELELAHUTUSE_ID."&echo=0");
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->
+			  if ($children) { ?>
+			  <ul>
+			  <?php echo $children; ?>
+			  </ul>
+			  <?php } ?>
+			</nav>
+            <div id="frame_content">
 
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
+		
+                <div id="owl2" class="owl-carousel owl-theme">
 
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-			<!-- /post details -->
+											<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-			<?php the_content(); // Dynamic Content ?>
+									<?php the_content(); ?>
 
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
+								<?php endwhile; ?>
 
-			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
+								<?php else: ?>
 
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+								<!-- article -->
+								<article>
 
-			<?php comments_template(); ?>
+									<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
 
-		</article>
-		<!-- /article -->
+								</article>
+								<!-- /article -->
 
-	<?php endwhile; ?>
+							<?php endif; ?>
 
-	<?php else: ?>
 
-		<!-- article -->
-		<article>
 
-			<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
 
-		</article>
-		<!-- /article -->
+            </div>
+            </div>
+        </div>
+        <img class="frame" src="<?php echo get_template_directory_uri(); ?>/img/bottom_frame.png" alt="frame"/>
+    </div>
+    </div>
+  
+</div>  
+<?php get_footer("footer2"); ?>
 
-	<?php endif; ?>
 
-	</section>
-	<!-- /section -->
 	</main>
 
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
