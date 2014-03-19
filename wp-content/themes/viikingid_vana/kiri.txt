@@ -1,0 +1,15 @@
+Mul on ka selline küsimus, et lehel
+http://www.viikingitekyla.ee/index.php?option=com_content&view=article&id=105&Itemid=60&lang=et
+on meil alamjaotus seminarid peoruumid jms
+[13:44:31] Kaia Konsap: ja siis loomulikult vaba aja tegevused
+[13:44:46] Kaia Konsap: millele klikates saab sisusse thumbnailid
+[13:45:03] Kaia Konsap: ehk nendel teistel võiks olla sama
+[13:46:05] Kaia Konsap: nii saaks näiteks mitmed seminariruumid panna eraldi, mitte kokku, nagu nad on sellel lehel
+http://www.viikingitekyla.ee/index.php?option=com_content&view=article&id=117&Itemid=72&lang=et
+
+kui inimene vajutab näiteks, et mida pakume, siis minu arust võiks leht teda viia esimesele alamlehele,
+näiteks, kui vajutan mida pakume, siis tuleb kohe vaba aja tegevuste leht ja edasi saan vasakult menüüst muuta
+[13:51:02] Kaia Konsap: siis jääks ära selline vaheleht nagu
+http://www.viikingitekyla.ee/index.php?option=com_content&view=article&id=105&Itemid=60&lang=et
+[13:51:43] Kaia Konsap: selle asemel näen neid samu thumbnaile
+

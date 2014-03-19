@@ -1,0 +1,12 @@
+*
+{margin: 0;padding: 0;}
+#rotator{overflow: hidden;margin: -580px auto 10px;position: relative;width: 660px;height: 370px;}
+#rotator img{border: 0;	width: 660px;height: 370px;}
+#rotator img{display: none;position: absolute;top: 0;left: 0;}
+p{text-align: center;}
+
+body {background-image:url(./img/taust4.jpeg);}
+#intro {margin:  auto ;	width: 800px;height: 631px; position: relative;}
+#footer{text-align: center;margin-top:200px;}
+#language {margin:auto ;width: 800px;height: 20px; position: relative;}
+img {border-style:none}
