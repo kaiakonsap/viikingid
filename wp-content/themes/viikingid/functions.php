@@ -17,6 +17,7 @@
 \*------------------------------------*/
 
 DEFINE('MEELELAHUTUSE_ID', 40);
+DEFINE('PILTIDE_ID', 79);
 
 if (!isset($content_width))
 {

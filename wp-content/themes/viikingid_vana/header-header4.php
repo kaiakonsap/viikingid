@@ -3,24 +3,24 @@
 	<head>
 		 <meta http-equiv="content-type" content="text/html; charset=<?php bloginfo('charset'); ?>" />
 		  <meta name="robots" content="index, follow" />
-		  <meta name="keywords" content="Viiking, viikingid, küla, forell, üritus, vabaaeg" />
+		  <meta name="keywords" content="Viiking, viikingid, küla, forell, üritus, vabaaeg,hinnapakkumine" />
 		  <meta name="description" content="<?php bloginfo('description'); ?>">
 		  
 		<meta name="title" content="<?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?>"/>
 		<meta name="author" content="Mati, Kaia" />
 		 <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 		
-		<link href="//www.google-analytics.com" rel="dns-prefetch">
 		<link href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 		<?php wp_head(); ?>
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style2.css" type="text/css" />
-
-		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/slidetop.js"></script>
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style3.css" type="text/css" />
 		
 	</head>
 
-<body onload="start();" <?php body_class(); ?>>
+<body <?php body_class(); ?>>
 <div class="box">
+
+<div id="header">
 <div class="language">
 <div id="jflanguageselection">
 <div class="rawimages">
@@ -31,4 +31,5 @@
 </div></div>
 </div>
 
+</div>
 

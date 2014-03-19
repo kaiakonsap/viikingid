@@ -1,0 +1,11 @@
+#advert_container
+{
+background-color:lightyellow;
+
+min-height: 600px;
+}
+form
+{
+width:400px;
+margin:20px auto;
+}
