@@ -99,6 +99,7 @@ function item( $atts, $content = null ) {
 $div_content = apply_filters('the_content',$content);
 	return ' <div class="item">' .$div_content. '</div>';
 }
+
 function img( $atts, $content = null ) {
 $div_content = apply_filters('the_content',$content);
 	return '    <div class="frame_wrap center">

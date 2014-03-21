@@ -8,14 +8,24 @@
 				<div>
 					<div>
 					<?php
-					  if($post)
+					$cat=get_post_custom_values('category');?>
+								 <?php query_posts("cat=$cat[0]&order=ASC");
+					  if($post){
 					  $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0&sort_column=menu_order");
-					
-					  if ($children) { ?>
+					  }
+					if ($children>0) { ?>
 					  <ul  class="menu">
 					  <?php echo $children; ?>
 					  </ul>
-					  <?php } ?>
+					  <?php } 
+					  			else{?>
+						  <ul  class="menu">
+								<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+									 <li><a href="<?php echo get_permalink()?>"><?php the_title();?></a></li>
+									<?php endwhile; ?>
+								<?php endif; ?>
+						</ul>
+					<?php } ?>
 					</div>
 				</div>
 			</div>
@@ -25,8 +35,7 @@
 	<div class="content">
 
 		<div class="sisu">
-								<?php $cat=get_post_custom_values('category');?>
-								 <?php query_posts("cat=$cat[0]&order=ASC"); ?>
+								
 							<div id="gallery">
 
 											<?php if (have_posts()): while (have_posts()) : the_post(); ?>

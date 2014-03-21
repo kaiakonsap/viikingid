@@ -6,9 +6,9 @@
 				<div>
 					<div>
 					<?php
-					  if($post)
-					  $children = wp_list_pages("title_li=&child_of=".MEELELAHUTUSE_ID."&echo=0&sort_column=menu_order");
-					
+					  if($post){
+					  $children = wp_list_pages("title_li=&child_of=".MEELELAHUTUSE_ID."&echo=0&sort_column=menu_order");		
+					  }
 					  if ($children) { ?>
 					  <ul  class="menu">
 					  <?php echo $children; ?>

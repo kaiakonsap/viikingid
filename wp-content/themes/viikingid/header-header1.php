@@ -15,6 +15,8 @@
 		    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.panorama.js"></script>
 		    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/cvi_text_lib.js"></script>
 			<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.advanced-panorama.js"></script>
+			<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.js"></script>
+		    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/owl.js"></script>
 			<!--[if lt IE 9]>
 			<script src="js/aFarkas-html5shiv-cec73ff/dist/html5shiv.js"></script>
 			<![endif]-->
@@ -29,7 +31,7 @@
         </script>
 
 	</head>
-	<body <?php body_class(); ?> id="panorama_body">
+	<body <?php body_class(); ?>>
 
 		<!-- wrapper -->
 		<div id="container">

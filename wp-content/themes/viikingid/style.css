@@ -1994,6 +1994,15 @@ a:hover {
 .owl-carousel .item {
     padding: 50px 23px !important;
 }
+.owl-carousel  .item p
+{
+ display:inline-block;
+}
+#owl3 .item
+{
+ padding: 0 !important;
+}
+
 .slaider_container {
     padding: 0 33px 95px 33px !important;
 }
@@ -2016,6 +2025,14 @@ a:hover {
 }@media screen and (min-width: 1160px) and (min-height: 700px) {
     .owl-carousel .item {
     margin: 25px 0 !important;
+}
+#owl3 .item
+{
+ padding: 0 !important;
+}
+.owl-carousel .item p
+{
+ display:inline-block;
 }
 }@media screen and (max-width: 1140px) {
     .text {
@@ -2108,6 +2125,15 @@ a {
     padding-left: 40px  !important;
     padding-right: 40px  !important;
 }
+.owl-carousel .item p
+{
+ display:inline-block;
+}
+#owl3 .item
+{
+ padding: 0 !important;
+}
+
 .frame_wrap {
     width: 100%}
 .frame {
@@ -2203,6 +2229,14 @@ a {
     padding: 30px 23px;
     margin: 10px;
     text-align: center;
+}
+#owl3 .item
+{
+ padding: 0 !important;
+}
+.owl-carousel .item p
+{
+ display:inline-block;
 }
 #map img {
     display: block;

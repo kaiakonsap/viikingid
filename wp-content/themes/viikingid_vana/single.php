@@ -2,7 +2,7 @@
 
 $post = $wp_query->post;
 
-if ( in_category('2') ) {
+if ( in_category('2')||in_category('5')||in_category('6') ) {
 
 include(TEMPLATEPATH . '/single-activities.php'); } 
 
