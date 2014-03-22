@@ -10,6 +10,10 @@ elseif ( in_category('4') ) {
 
 include(TEMPLATEPATH . '/single-gallery.php'); } 
 
+elseif ( in_category('11') ) {
+
+include(TEMPLATEPATH . '/single-menu.php'); }
+
 
 else {
 

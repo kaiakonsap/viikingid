@@ -16,8 +16,9 @@
 	Theme Support
 \*------------------------------------*/
 
-DEFINE('MEELELAHUTUSE_ID', 40);
+DEFINE('PAKUME_ID', 68);
 DEFINE('PILTIDE_ID', 79);
+DEFINE('MENU_ID', 75);
 
 if (!isset($content_width))
 {

@@ -410,7 +410,7 @@
     border: none;
 }
 .panorama-area {
-    font-family: algerian;
+    font-family: avqest,algerian, "Book Antiqua";
     font-size: 100%;
     cursor: pointer;
     text-decoration: none;
@@ -418,7 +418,7 @@
     text-align: center;
 }
 .panorama-area p {
-    font-family: algerian;
+    font-family: avqest,algerian, "Book Antiqua";
     color: #500000;
 }
 .panorama-area-hover {
@@ -1750,6 +1750,10 @@ input[type="checkbox"], input[type="radio"] {
     src: url(./fonts/lucida_sans_unicode.woff);
 }
 @font-face {
+    font-family: avqest,algerian, "Book Antiqua";
+    src: url(./fonts/avqest.ttf);
+}
+@font-face {
     font-family: algerian;
     src: url(./fonts/algerian.woff);
 }
@@ -1769,7 +1773,7 @@ html {
 }
 #panorama_body {
     background-color: #b4e1e8;
-    font-size: 11px;
+    font-size: 18px;
     background-image: -moz-linear-gradient(top,  #b4e1e8 0%,  #fff 37%,  #b4e1e8 96%);
     background-image: linear-gradient(top,  #b4e1e8 0%,  #fff 37%,  #b4e1e8 96%);
     background-image: -webkit-linear-gradient(top,  #b4e1e8 0%,  #fff 37%,  #b4e1e8 96%);
@@ -1807,19 +1811,20 @@ p {
     font-family: lucida_regular;
 }
 p span {
-    font-family: algerian;
+    font-family: avqest,algerian, "Book Antiqua";
     font-size: 25px;
     line-height: normal;
 }
 a {
     text-decoration: none;
     color: #500000;
-    font-family: algerian;
+    font-family: avqest,algerian, "Book Antiqua";
     padding: 20px 15px 20px 15px;
+    font-size: 16px;
 }
 h3 {
     color: #500000;
-    font-family: algerian;
+    font-family: avqest,algerian, "Book Antiqua";
     font-weight: normal;
 }
 .red {
@@ -1829,7 +1834,7 @@ a:hover {
     color: #c06733;
 }
 .paper .nav a {
-    font-size: 14px;
+    font-size: 20px;
 }
 .current_page_item a, .current_page_parent a {
     color: #c06733;
@@ -1883,7 +1888,7 @@ a:hover {
 }
 .thumbs {
     margin-top: 10px;
-    padding-bottom: 67px;
+    padding-bottom: 58px;
 }
 .thumb {
     display: inline-block;
@@ -1892,7 +1897,7 @@ a:hover {
     margin-top: 10px;
 }
 .thumb .link_holder p {
-    font-family: algerian;
+    font-family: avqest,algerian, "Book Antiqua";
     color: #500000;
     text-align: center;
     padding: 0 10px;
@@ -1930,7 +1935,7 @@ a:hover {
     margin-bottom: 20px;
  }
 .img_wrap {
-    margin: 44px 32px 39px 32px;
+    margin: 44px 32px 48px 32px;
     height: 165px;
     display: inline-block;
     overflow: hidden;
@@ -1942,9 +1947,12 @@ a:hover {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background-image: url("./img/frame.png");
+    background-image: url("./img/frame2.png");
     background-size: cover;
     z-index: 100;
+}
+.thumb .frame_wrap:before {
+    background-image: url("./img/frame.png");
 }
 .thumb .frame_wrap {
     margin-bottom: 0;
@@ -2236,7 +2244,8 @@ a {
 .img_wrap {
     overflow: hidden;
 }
-}.owl-carousel .item {
+}
+.owl-carousel .item {
     padding: 30px 23px;
     margin: 10px;
     text-align: center;
@@ -2365,3 +2374,15 @@ html[xmlns] .clearfix {
 }
 * html .clearfix {
     height: 1%}
+article h2
+{
+color: brown;
+}
+footer
+{
+    text-align: center;
+}
+footer p
+{
+    display: inline-block;
+}

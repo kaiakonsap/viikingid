@@ -8,7 +8,7 @@
             <nav class="nav">
 			<?php
 
-		$children = wp_list_pages("title_li=&depth=1&child_of=".PAKUME_ID."&echo=0");
+		$children = wp_list_pages("title_li=&depth=1&child_of=".MENU_ID."&echo=0");
 
 			  if ($children) { ?>
 			  <ul>
