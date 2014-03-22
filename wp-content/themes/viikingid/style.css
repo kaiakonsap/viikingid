@@ -557,7 +557,7 @@
 }
 .owl-item.loading {
     min-height: 150px;
-    background: url(AjaxLoader.gif) no-repeat center center;
+    background: url(./img/AjaxLoader.gif) no-repeat center center;
 }
 .owl-origin {
     -webkit-perspective: 1200px;
@@ -1905,6 +1905,7 @@ a:hover {
     width: 200px;
     margin: 0;
 }
+
 .thumb .frame_wrap .img_wrap {
     margin: 33px 25px 32px 25px;
     height: 100px;
@@ -1913,15 +1914,24 @@ a:hover {
     margin: 0 0 20px 0;
 }
 .frame_wrap {
-    width: 270px;
+    width: 305px;
     display: inline-block;
     position: relative;
     vertical-align: text-bottom;
     margin: 0 0 20px 40px;
 }
+.flxmap-container
+ {
+    display: inline-block;
+     border: 1px solid gray;
+     width: 100%;
+     max-width: 300px;
+    max-height: 250px;
+    margin-bottom: 20px;
+ }
 .img_wrap {
     margin: 44px 32px 39px 32px;
-    height: 140px;
+    height: 165px;
     display: inline-block;
     overflow: hidden;
 }
@@ -2154,6 +2164,7 @@ a {
 .frame_wrap:before {
     background-image: none;
 }
+
 .thumb .frame_wrap .img_wrap {
     margin: 0;
     height: 150px;
