@@ -2170,7 +2170,7 @@ a {
     max-width: 260px;
 }
 .frame_wrap:before {
-    background-image: none;
+    background-image: none !important;
 }
 
 .thumb .frame_wrap .img_wrap {
@@ -2181,30 +2181,30 @@ a {
     margin: 37px 0 0 0;
 }
 .item .img_wrap {
-    border: 6px double #edb742;
+    border: 15px double #edb742;
     -webkit-border-image-source: url(./img/border-image-2.png);
     -webkit-border-image-slice: 28;
-    -webkit-border-image-width: 0.8em;
+    -webkit-border-image-width: 15px;
     -webkit-border-image-outset: 0;
     -webkit-border-image-repeat: round;
     -moz-border-image-source: url(./img/border-image-2.png);
     -moz-border-image-slice: 28;
-    -moz-border-image-width: 0.8em;
+    -moz-border-image-width: 15px;
     -moz-border-image-outset: 0;
     -moz-border-image-repeat: round;
     -ms-border-image-source: url(./img/border-image-2.png);
     -ms-border-image-slice: 28;
-    -ms-border-image-width: 0.8em;
+    -ms-border-image-width: 15px;
     -ms-border-image-outset: 0;
     -ms-border-image-repeat: round;
     -o-border-image-source: url(./img/border-image-2.png);
     -o-border-image-slice: 28;
-    -o-border-image-width: 0.8em;
+    -o-border-image-width: 15px;
     -o-border-image-outset: 0;
     -o-border-image-repeat: round;
     border-image-source: url(./img/border-image-2.png);
     border-image-slice: 28;
-    border-image-width: 0.8em;
+    border-image-width: 15px;
     border-image-outset: 0;
     border-image-repeat: round;
 }
@@ -2249,6 +2249,30 @@ a {
     padding: 30px 23px;
     margin: 10px;
     text-align: center;
+}
+#owl_back
+{
+    background-color: sandybrown;
+    background-image: url("./img/paper.jpg");
+    background-size: cover;
+    background-position: top center;
+}
+#owl3
+{
+
+    margin-top: -10px;
+    border-top: 35px double #edb742;
+    -moz-border-image:url("./img/bottom_frame.png") 95 30 round; /* Firefox */
+    -webkit-border-image:url("./img/bottom_frame.png") 95 30 round; /* Safari */
+    -o-border-image:url("./img/bottom_frame.png") 95 30 round; /* Opera */
+    border-image:url("./img/bottom_frame.png") 95 30 round;
+    border-bottom:0;
+    border-left:0;
+    border-right:0;
+}
+#owl3 .owl-wrapper-outer
+{margin-top: -10px;
+
 }
 #owl3 .item
 {
