@@ -25,7 +25,7 @@ $(document).ready(function(){
 		navigation: false,
 		autoPlay: true,
 		stopOnHover: true,
-        items : 5, //10 items above 1000px browser width
+        items : 6, //10 items above 1000px browser width
         itemsDesktop : [1300,4], //5 items between 1000px and 901px
         itemsDesktopSmall : [1100,3], // betweem 900px and 601px
         itemsTablet: [840,2], //2 items between 600 and 0
