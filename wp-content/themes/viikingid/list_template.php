@@ -25,8 +25,15 @@
 
 
                     <div id="owl1" class="owl-carousel owl-theme">
-                            <?php $cat=get_post_custom_values('category');?>
-                            <?php query_posts("cat=$cat[0]&order=ASC"); ?>
+                        <?php
+                        if(is_array(get_post_custom_values('category'))){
+                            $cat=implode(",",get_post_custom_values('category'));
+                            query_posts("cat=$cat&order=ASC");}
+                        else
+                        {
+                            query_posts("order=ASC");
+                        }
+                        ?>
                         <?php if (have_posts()): while (have_posts()) : the_post(); ?>
                             <div class="item">
                                 <a href="<?php echo get_permalink()?>">
@@ -41,7 +48,7 @@
 
                                         </div>
                                         <div class="link_holder"><?php the_title();?></div>
-                                    </div>
+                                        <?php edit_post_link(); ?> </div>
                                 </a>
                             </div>
 

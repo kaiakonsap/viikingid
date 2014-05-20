@@ -1,6 +1,7 @@
 $(document).ready(function(){
     var owl = $("#owl1");
     var owl2 = $("#owl2");
+    var owl3 = $("#owl3");
 
 
     owl.owlCarousel({
@@ -14,6 +15,11 @@ $(document).ready(function(){
     });
 
     owl2.owlCarousel({
+                pagination : false,
+		navigation: true,
+        singleItem:true
+    });
+    owl3.owlCarousel({
                 pagination : false,
 		navigation: true,
         singleItem:true

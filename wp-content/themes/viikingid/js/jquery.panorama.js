@@ -42,7 +42,7 @@
 			
 			panoramaContainer = $(this).parent();
 			panoramaContainer.css('height', elemHeight+'px').css('overflow', 'hidden').wrap("<div class='panorama-viewport'></div>").parent().css('width',settings.viewport_width+'px')
-				.append("<div class='panorama-control'><a href='#' class='panorama-control-left'><img src='./wp-content/themes/viikingid/img/arrow.png'/></a> <a href='#' class='panorama-control-pause'>x</a> <a href='#' class='panorama-control-right'><img src='./wp-content/themes/viikingid/img/arrow2.png'/></a> </div>");
+				.append("<div class='panorama-control'><a href='#' class='panorama-control-left'><img src='./images/arrow.png'/></a> <a href='#' class='panorama-control-pause'>x</a> <a href='#' class='panorama-control-right'><img src='./images/arrow2.png'/></a> </div>");
 			
 			panoramaViewport = panoramaContainer.parent();
 

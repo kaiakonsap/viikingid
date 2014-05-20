@@ -35,7 +35,7 @@
                     <div id="owl2" class="owl-carousel owl-theme">
 
                         <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
+                            <?php edit_post_link(); ?>
                             <?php the_content(); ?>
 
 

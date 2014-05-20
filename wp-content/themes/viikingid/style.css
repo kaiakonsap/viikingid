@@ -1,3 +1,9 @@
+/*
+Theme Name: viikingid
+Author: Kaia
+Description: Vana Viikingite K�la teema
+Tags: old,vikings
+*/
 #fancybox-loading {
     position: fixed;
     top: 50%;
@@ -1836,6 +1842,9 @@ a:hover {
 .paper .nav a {
     font-size: 20px;
 }
+.nav .shailan-dropdown-menu-widget a {
+    font-size: 20px;
+}
 .current_page_item a, .current_page_parent a {
     color: #c06733;
 }
@@ -1939,6 +1948,16 @@ a:hover {
     height: 165px;
     display: inline-block;
     overflow: hidden;
+}
+
+.img_small {
+    margin: 15px;
+    width: 50px;
+    display: inline-block;
+    overflow: hidden;
+}
+.img_small img{
+    width: 100%;
 }
 .frame_wrap:before {
     content: "";
