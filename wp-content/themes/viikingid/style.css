@@ -1778,14 +1778,7 @@ html {
     background-attachment: fixed;
 }
 #panorama_body {
-    background-color: #b4e1e8;
-    font-size: 18px;
-    background-image: -moz-linear-gradient(top,  #b4e1e8 0%,  #fff 37%,  #b4e1e8 96%);
-    background-image: linear-gradient(top,  #b4e1e8 0%,  #fff 37%,  #b4e1e8 96%);
-    background-image: -webkit-linear-gradient(top,  #b4e1e8 0%,  #fff 37%,  #b4e1e8 96%);
-    background-image: -o-linear-gradient(top,  #b4e1e8 0%,  #fff 37%,  #b4e1e8 96%);
-    background-image: -ms-linear-gradient(top,  #b4e1e8 0%,  #fff 37%,  #b4e1e8 96%);
-    background-image: -webkit-gradient(linear,  right top,  right bottom,  color-stop(0%,  #b4e1e8),  color-stop(37%,  #fff),  color-stop(96%,  #b4e1e8));
+   font-size: 18px;
 }
 header {
     margin-left: auto;

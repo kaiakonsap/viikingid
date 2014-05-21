@@ -1,46 +1,78 @@
-<?php /* Template Name: index template */ get_header("header1"); ?>
+<?php /* Template Name: index template */
+get_header("header1"); ?>
 
-<main role="main">
+
 
     <div class="wrapper panorama">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/panoraam2.png" class="advancedpanorama" width="3220" height="508" usemap="testmap" alt="Atelier du sculpteur" />
+        <img src="<?php echo get_template_directory_uri(); ?>/img/panoraam2.png" class="advancedpanorama" width="3220"
+             height="508" usemap="testmap" alt="Atelier du sculpteur"/>
+
+        <?php
+        if (is_array(get_post_custom_values('category'))) {
+            $cat = implode(",", get_post_custom_values('category'));
+            query_posts("cat=$cat&order=ASC");
+        } else {
+            query_posts("order=ASC");
+        }
+        ?>
         <map id="testmap" name="testmap">
-            <area shape="rect" coords="1653,72,1839,255" href="index.html" alt="viikingite külast" />
-            <area shape="rect" coords="1950,114,2081,210" href="images/test.JPG" alt="meelelahutus" />
-            <area shape="rect" coords="1920,276,2070,351" href="images/test.JPG" alt="kontakt"  />
+        <?php if (have_posts()): while (have_posts()) : the_post();
+            $posttags = get_the_tags();
+            $content = the_content($post->ID);?>
+
+                <area shape="rect"
+                      coords="<?php  if ($posttags) {
+                          $len = count($posttags);
+                          $count=0;
+                          foreach ($posttags as $tag) {
+                              if($count==($len-1))
+                              {echo $tag->name;}
+                              else
+                              {
+                                  echo $tag->name . ',';
+                              }
+                            $count++;
+                          }
+                      }?>" href="<?php echo get_permalink($content) ?>" alt='<?php the_post_thumbnail(); ?>'/>
+
+            <input type="text" class="title" value="<?php the_title() ?>"/>
+
+        <?php endwhile; ?>
+
+        <?php else: ?>
+
+            <!-- article -->
+            <article>
+
+                <h2><?php _e('Sorry, nothing to display.', 'html5blank'); ?></h2>
+
+            </article>
+            <!-- /article -->
+
+        <?php endif; ?>
         </map>
+        <?php wp_reset_query(); ?>
+
     </div>
 
     <div id="owl_back">
+
         <div id="owl3" class="owl-carousel owl-theme">
-            <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+            <?php
+            $fields = $cfs->get('pildid');
 
+            foreach ($fields as $field) {
+                ?>
 
-                    <a href="<?php echo get_permalink()?>">
-                        <?php edit_post_link(); ?>
-                                    <?php the_content(); ?>
+                <div class="item">
 
-
-                    </a>
-
-
-
-            <?php endwhile; ?>
-
-            <?php else: ?>
-
-                <!-- article -->
-                <article>
-
-                    <h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-                </article>
-                <!-- /article -->
-
-            <?php endif; ?>
-
+                    <a href="<?php echo get_permalink($field['url']); ?>">
+                        <img src="<?php echo $field['pilt']; ?>"/></a>
+                </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
+    </div>
     <?php get_footer("footer1"); ?>
-
-</main>

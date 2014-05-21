@@ -42,7 +42,7 @@
 			
 			panoramaContainer = $(this).parent();
 			panoramaContainer.css('height', elemHeight+'px').css('overflow', 'hidden').wrap("<div class='panorama-viewport'></div>").parent().css('width',settings.viewport_width+'px')
-				.append("<div class='panorama-control'><a href='#' class='panorama-control-left'><img src='./images/arrow.png'/></a> <a href='#' class='panorama-control-pause'>x</a> <a href='#' class='panorama-control-right'><img src='./images/arrow2.png'/></a> </div>");
+				.append("<div class='panorama-control'><a href='#' class='panorama-control-left'><img src='./wp-content/themes/viikingid/img/arrow.png'/></a> <a href='#' class='panorama-control-pause'>x</a> <a href='#' class='panorama-control-right'><img src='./wp-content/themes/viikingid/img/arrow2.png'/></a> </div>");
 			
 			panoramaViewport = panoramaContainer.parent();
 
@@ -74,7 +74,7 @@
 			      }
 			}).bind('contextmenu',function(){return false;});
 			
-			panoramaViewport.css('height', elemHeight+'px').css('overflow', 'hidden').find('a.panorama-control-left').bind('click', function() {
+			panoramaViewport.css('height', elemHeight+'%').css('overflow', 'hidden').find('a.panorama-control-left').bind('click', function() {
 				$(panoramaContainer).stop();
 				settings.direction = 'right';
 				panorama_animate(panoramaContainer, elemWidth, settings);
