@@ -10,32 +10,19 @@
             <area shape="rect" coords="1920,276,2070,351" href="images/test.JPG" alt="kontakt"  />
         </map>
     </div>
-    <?php
-    if(is_array(get_post_custom_values('category'))){
-        $cat=implode(",",get_post_custom_values('category'));
-        query_posts("cat=$cat&order=ASC");}
-    else
-    {
-        query_posts("order=ASC");
-    }
-    ?>
+
     <div id="owl_back">
         <div id="owl3" class="owl-carousel owl-theme">
             <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-                <div class="item">
+
                     <a href="<?php echo get_permalink()?>">
-                        <div class="thumb">
+                        <?php edit_post_link(); ?>
+                                    <?php the_content(); ?>
 
 
-                                <?php if(has_post_thumbnail()): ?>
-                                    <div class="img_small">
-                                        <?php the_post_thumbnail();?>
-                                    </div>
-                                <?php endif; ?>
-                            <?php edit_post_link(); ?> </div>
                     </a>
-                </div>
+
 
 
             <?php endwhile; ?>
