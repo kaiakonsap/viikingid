@@ -35,9 +35,9 @@
                     <div id="owl2" class="owl-carousel owl-theme">
 
                         <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-                            <?php edit_post_link(); ?>
-                            <?php the_content(); ?>
 
+                            <?php the_content(); ?>
+                            <?php edit_post_link(); ?>
 
                         <?php endwhile; ?>
 
@@ -46,7 +46,7 @@
                             <!-- article -->
                             <article>
 
-                                <h2><?php _e( 'No items.' ); ?></h2>
+                                <h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
 
                             </article>
                             <!-- /article -->
