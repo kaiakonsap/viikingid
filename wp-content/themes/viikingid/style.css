@@ -1970,8 +1970,16 @@ a:hover {
     margin-bottom: 0;
 }
 .img_wrap  img{
+    width: 77%;
+    position: absolute;
+    top: 44px;
+    left: 30px;
+}
+.thumb .img_wrap  img{
     width: 100%;
     position: relative;
+    left:0;
+    top:0;
 }
 .text .title {
     margin-bottom: 20px;
@@ -1989,6 +1997,12 @@ a:hover {
     display: inline-block;
     vertical-align: top;
     margin-top: 15px;
+}
+.text a
+{
+    font-family: Lucida Sans Unicode;
+    text-decoration: underline;
+    font-size: 11px;
 }
 .center {
     vertical-align: middle;
