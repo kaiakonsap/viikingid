@@ -104,7 +104,7 @@ $div_content = apply_filters('the_content',$content);
 function img( $atts, $content = null ) {
 $div_content = apply_filters('the_content',$content);
 	return '    <div class="frame_wrap center">
-					<div class="img_wrap"> ' .$div_content. '</div></div>';
+					<div class="img_wrap"><span class="fold"> ' .$div_content. '</span></div></div>';
 }
 
 function text( $atts, $content = null ) {

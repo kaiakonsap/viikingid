@@ -42,7 +42,9 @@
 
                                             <?php if(has_post_thumbnail()): ?>
                                                 <div class="img_wrap">
+
                                                     <?php the_post_thumbnail();?>
+
                                                 </div>
                                             <?php endif; ?>
 
