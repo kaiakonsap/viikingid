@@ -20,15 +20,12 @@ DEFINE('PAKUME_ID', 68);
 DEFINE('PILTIDE_ID', 79);
 DEFINE('MENU_ID', 75);
 
-if (!isset($content_width))
-{
+if (!isset($content_width)) {
     $content_width = 900;
 }
 
 
-
-if (function_exists('add_theme_support'))
-{
+if (function_exists('add_theme_support')) {
     // Add Menu Support
     add_theme_support('menus');
 
@@ -72,48 +69,52 @@ if (function_exists('add_theme_support'))
 // HTML5 Blank navigation
 function viking_nav()
 {
-	wp_nav_menu(
-	array(
-		'theme_location'  => 'header-menu',
-		'menu'            => '',
-		'container'       => 'div',
-		'container_class' => 'menu-{menu slug}-container',
-		'container_id'    => '',
-		'menu_class'      => 'menu',
-		'menu_id'         => '',
-		'echo'            => true,
-		'fallback_cb'     => 'wp_page_menu',
-		'before'          => '',
-		'after'           => '',
-		'link_before'     => '',
-		'link_after'      => '',
-		'items_wrap'      => '<ul>%3$s</ul>',
-		'depth'           => 1,
-		'child_of'    	=> 0,
-		'walker'          => ''
-		)
-	);
+    wp_nav_menu(
+        array(
+            'theme_location' => 'header-menu',
+            'menu' => '',
+            'container' => 'div',
+            'container_class' => 'menu-{menu slug}-container',
+            'container_id' => '',
+            'menu_class' => 'menu',
+            'menu_id' => '',
+            'echo' => true,
+            'fallback_cb' => 'wp_page_menu',
+            'before' => '',
+            'after' => '',
+            'link_before' => '',
+            'link_after' => '',
+            'items_wrap' => '<ul>%3$s</ul>',
+            'depth' => 1,
+            'child_of' => 0,
+            'walker' => ''
+        )
+    );
 }
 
 //[foobar]
-function item( $atts, $content = null ) {
-$div_content = apply_filters('the_content',$content);
-	return ' <div class="item">' .$div_content. '</div>';
+function item($atts, $content = null)
+{
+    $div_content = apply_filters('the_content', $content);
+    return ' <div class="item">' . $div_content . '</div>';
 }
 
-function img( $atts, $content = null ) {
-$div_content = apply_filters('the_content',$content);
-	return '    <div class="frame_wrap center">
-					<div class="img_wrap"><span class="fold"> ' .$div_content. '</span></div></div>';
+function img($atts, $content = null)
+{
+    $div_content = apply_filters('the_content', $content);
+    return '    <div class="frame_wrap center">
+					<div class="img_wrap"><span class="fold"> ' . $div_content . '</span></div></div>';
 }
 
-function text( $atts, $content = null ) {
-$div_content = apply_filters('the_content',$content);
-	return '<div class="text">' .$div_content. '</div>';
+function text($atts, $content = null)
+{
+    $div_content = apply_filters('the_content', $content);
+    return '<div class="text">' . $div_content . '</div>';
 }
-add_shortcode( 'slaid', 'item' );
-add_shortcode( 'pilt', 'img' );
-add_shortcode( 'tekst', 'text' );
+
+add_shortcode('slaid', 'item');
+add_shortcode('pilt', 'img');
+add_shortcode('tekst', 'text');
 
 
 // Load HTML5 Blank scripts (header.php)
@@ -121,11 +122,11 @@ function html5blank_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-    	wp_deregister_script('jquery'); // Deregister WordPress jQuery
-    	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.9.1'); // Google CDN jQuery
-    	wp_enqueue_script('jquery'); // Enqueue it!
+        wp_deregister_script('jquery'); // Deregister WordPress jQuery
+        wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.9.1'); // Google CDN jQuery
+        wp_enqueue_script('jquery'); // Enqueue it!
 
-    	wp_register_script('conditionizr', 'http://cdnjs.cloudflare.com/ajax/libs/conditionizr.js/4.0.0/conditionizr.js', array(), '4.0.0'); // Conditionizr
+        wp_register_script('conditionizr', 'http://cdnjs.cloudflare.com/ajax/libs/conditionizr.js/4.0.0/conditionizr.js', array(), '4.0.0'); // Conditionizr
         wp_enqueue_script('conditionizr'); // Enqueue it!
 
         wp_register_script('modernizr', 'http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js', array(), '2.6.2'); // Modernizr
@@ -203,11 +204,10 @@ function add_slug_to_body_class($classes)
 }
 
 // If Dynamic Sidebar Exists
-if (function_exists('register_sidebar'))
-{
+if (function_exists('register_sidebar')) {
     // Define Sidebar Widget Area 1
     register_sidebar(array(
-        'name' =>'esilehe_lingid',
+        'name' => 'esilehe_lingid',
         'description' => "Pildid, mis esilehel lingivad sisusse",
         'id' => 'widget-area-1',
         'before_widget' => '<div id="%1$s" class="%2$s">',
@@ -300,14 +300,14 @@ function html5_style_remove($tag)
 }
 
 // Remove thumbnail width and height dimensions that prevent fluid images in the_thumbnail
-function remove_thumbnail_dimensions( $html )
+function remove_thumbnail_dimensions($html)
 {
     $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
     return $html;
 }
 
 // Custom Gravatar in Settings > Discussion
-function html5blankgravatar ($avatar_defaults)
+function html5blankgravatar($avatar_defaults)
 {
     $myavatar = get_template_directory_uri() . '/img/gravatar.jpg';
     $avatar_defaults[$myavatar] = "Custom Gravatar";
@@ -327,46 +327,48 @@ function enable_threaded_comments()
 // Custom Comments Callback
 function html5blankcomments($comment, $args, $depth)
 {
-	$GLOBALS['comment'] = $comment;
-	extract($args, EXTR_SKIP);
+    $GLOBALS['comment'] = $comment;
+    extract($args, EXTR_SKIP);
 
-	if ( 'div' == $args['style'] ) {
-		$tag = 'div';
-		$add_below = 'comment';
-	} else {
-		$tag = 'li';
-		$add_below = 'div-comment';
-	}
-?>
+    if ('div' == $args['style']) {
+        $tag = 'div';
+        $add_below = 'comment';
+    } else {
+        $tag = 'li';
+        $add_below = 'div-comment';
+    }
+    ?>
     <!-- heads up: starting < for the html tag (li or div) in the next line: -->
-    <<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
-	<?php if ( 'div' != $args['style'] ) : ?>
-	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
-	<?php endif; ?>
-	<div class="comment-author vcard">
-	<?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['180'] ); ?>
-	<?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
-	</div>
-<?php if ($comment->comment_approved == '0') : ?>
-	<em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
-	<br />
+    <<?php echo $tag ?> <?php comment_class(empty($args['has_children']) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
+    <?php if ('div' != $args['style']) : ?>
+    <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+<?php endif; ?>
+    <div class="comment-author vcard">
+        <?php if ($args['avatar_size'] != 0) echo get_avatar($comment, $args['180']); ?>
+        <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
+    </div>
+    <?php if ($comment->comment_approved == '0') : ?>
+    <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
+    <br/>
 <?php endif; ?>
 
-	<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
-		<?php
-			printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
-		?>
-	</div>
+    <div class="comment-meta commentmetadata"><a
+            href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)) ?>">
+            <?php
+            printf(__('%1$s at %2$s'), get_comment_date(), get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'), '  ', '');
+        ?>
+    </div>
 
-	<?php comment_text() ?>
+    <?php comment_text() ?>
 
-	<div class="reply">
-	<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-	</div>
-	<?php if ( 'div' != $args['style'] ) : ?>
-	</div>
-	<?php endif; ?>
-<?php }
+    <div class="reply">
+        <?php comment_reply_link(array_merge($args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+    </div>
+    <?php if ('div' != $args['style']) : ?>
+    </div>
+<?php endif; ?>
+<?php
+}
 
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
@@ -436,35 +438,35 @@ function create_post_type_html5()
     register_taxonomy_for_object_type('post_tag', 'html5-blank');
     register_post_type('html5-blank', // Register Custom Post Type
         array(
-        'labels' => array(
-            'name' => __('HTML5 Blank Custom Post', 'html5blank'), // Rename these to suit
-            'singular_name' => __('HTML5 Blank Custom Post', 'html5blank'),
-            'add_new' => __('Add New', 'html5blank'),
-            'add_new_item' => __('Add New HTML5 Blank Custom Post', 'html5blank'),
-            'edit' => __('Edit', 'html5blank'),
-            'edit_item' => __('Edit HTML5 Blank Custom Post', 'html5blank'),
-            'new_item' => __('New HTML5 Blank Custom Post', 'html5blank'),
-            'view' => __('View HTML5 Blank Custom Post', 'html5blank'),
-            'view_item' => __('View HTML5 Blank Custom Post', 'html5blank'),
-            'search_items' => __('Search HTML5 Blank Custom Post', 'html5blank'),
-            'not_found' => __('No HTML5 Blank Custom Posts found', 'html5blank'),
-            'not_found_in_trash' => __('No HTML5 Blank Custom Posts found in Trash', 'html5blank')
-        ),
-        'public' => true,
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
-        'has_archive' => true,
-        'supports' => array(
-            'title',
-            'editor',
-            'excerpt',
-            'thumbnail'
-        ), // Go to Dashboard Custom HTML5 Blank post for supports
-        'can_export' => true, // Allows export in Tools > Export
-        'taxonomies' => array(
-            'post_tag',
-            'category'
-        ) // Add Category and Post Tags support
-    ));
+            'labels' => array(
+                'name' => __('HTML5 Blank Custom Post', 'html5blank'), // Rename these to suit
+                'singular_name' => __('HTML5 Blank Custom Post', 'html5blank'),
+                'add_new' => __('Add New', 'html5blank'),
+                'add_new_item' => __('Add New HTML5 Blank Custom Post', 'html5blank'),
+                'edit' => __('Edit', 'html5blank'),
+                'edit_item' => __('Edit HTML5 Blank Custom Post', 'html5blank'),
+                'new_item' => __('New HTML5 Blank Custom Post', 'html5blank'),
+                'view' => __('View HTML5 Blank Custom Post', 'html5blank'),
+                'view_item' => __('View HTML5 Blank Custom Post', 'html5blank'),
+                'search_items' => __('Search HTML5 Blank Custom Post', 'html5blank'),
+                'not_found' => __('No HTML5 Blank Custom Posts found', 'html5blank'),
+                'not_found_in_trash' => __('No HTML5 Blank Custom Posts found in Trash', 'html5blank')
+            ),
+            'public' => true,
+            'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'excerpt',
+                'thumbnail'
+            ), // Go to Dashboard Custom HTML5 Blank post for supports
+            'can_export' => true, // Allows export in Tools > Export
+            'taxonomies' => array(
+                'post_tag',
+                'category'
+            ) // Add Category and Post Tags support
+        ));
 }
 
 /*------------------------------------*\

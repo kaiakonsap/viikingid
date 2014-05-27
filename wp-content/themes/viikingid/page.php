@@ -1,72 +1,55 @@
-<?php /* Template Name: Tutvustus Template */ get_header("header2"); ?>
+<?php /* Template Name: Tutvustus Template */
+get_header("header2"); ?>
 
-<main role="main">
+<div class="wrapper">
+    <div id="frame">
+        <img class="frame" src="<?php echo get_template_directory_uri(); ?>/img/top_frame.png" alt="frame"/>
 
-    <?php $pagekids = get_pages("child_of=".$post->ID."&sort_column=menu_order");
-    if ($pagekids) {
-        $firstchild = $pagekids[0];
-        wp_redirect(get_permalink($firstchild->ID));
-    }?>
-
-
-    <div class="wrapper">
-        <div id="frame">
-            <img class="frame" src="<?php echo get_template_directory_uri(); ?>/img/top_frame.png" alt="frame"/>
-
-            <div id="paper" class="paper">
-                <nav class="nav">
-                    <?php
-                    if($post->post_parent)
-                        $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0&sort_column=menu_order");
-                    else
-                        $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0&sort_column=menu_order");
-                    if ($children) { ?>
-                        <ul>
-                            <?php echo $children; ?>
-                        </ul>
-                    <?php } ?>
-                </nav>
+        <div id="paper" class="paper">
+            <nav class="nav">
+                <div id="breadcrumbs"> <?php if (function_exists('show_full_breadcrumb'))
+                        show_full_breadcrumb(
+                            array(
+                                'labels' => array(
+                                    'local' => false, // set FALSE to hide
+                                    'home' => 'Esileht'
+                                )
+                            )
+                        ); ?>
+                </div>
+            </nav>
 
 
+            <div id="frame_content">
 
-                <div id="frame_content">
+                <div id="owl2" class="owl-carousel owl-theme">
 
+                    <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-                    <div id="owl2" class="owl-carousel owl-theme">
+                        <?php the_content(); ?>
+                        <?php edit_post_link(); ?>
 
-                        <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+                    <?php endwhile; ?>
 
-                            <?php the_content(); ?>
-                            <?php edit_post_link(); ?>
+                    <?php else: ?>
 
-                        <?php endwhile; ?>
+                        <!-- article -->
+                        <article>
 
-                        <?php else: ?>
+                            <h2><?php _e('Sorry, nothing to display.', 'html5blank'); ?></h2>
 
-                            <!-- article -->
-                            <article>
+                        </article>
+                        <!-- /article -->
 
-                                <h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-                            </article>
-                            <!-- /article -->
-
-                        <?php endif; ?>
+                    <?php endif; ?>
 
 
-
-
-                    </div>
                 </div>
             </div>
-            <img class="frame" src="<?php echo get_template_directory_uri(); ?>/img/bottom_frame.png" alt="frame"/>
         </div>
+        <img class="frame" src="<?php echo get_template_directory_uri(); ?>/img/bottom_frame.png" alt="frame"/>
     </div>
+</div>
 
-    </div>
-    <?php get_footer("footer2"); ?>
-
-
-</main>
-
-
+</div>
+<?php get_footer("footer2"); ?>

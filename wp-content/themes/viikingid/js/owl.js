@@ -1,41 +1,38 @@
-$(document).ready(function(){
+$(document).ready(function () {
     var owl = $("#owl1");
     var owl2 = $("#owl2");
     var owl3 = $("#owl3");
 
 
     owl.owlCarousel({
-        pagination : false,
-		navigation: true,
-        lazyLoad:true,
-        items : 5, //10 items above 1000px browser width
-        itemsDesktop : [1400,4], //5 items between 1000px and 901px
-        itemsDesktopSmall : [1100,3], // betweem 900px and 601px
-        itemsTablet: [840,2], //2 items between 600 and 0
-        itemsMobile :[590,1] // itemsMobile disabled - inherit from itemsTablet option
+        pagination: false,
+        navigation: true,
+        lazyLoad: true,
+        items: 5, //10 items above 1000px browser width
+        itemsDesktop: [1400, 4], //5 items between 1000px and 901px
+        itemsDesktopSmall: [1100, 3], // betweem 900px and 601px
+        itemsTablet: [840, 2], //2 items between 600 and 0
+        itemsMobile: [590, 1] // itemsMobile disabled - inherit from itemsTablet option
     });
 
     owl2.owlCarousel({
-                pagination : false,
-		navigation: true,
-        lazyLoad:true,
-        singleItem:true
+        pagination: false,
+        navigation: true,
+        lazyLoad: true,
+        singleItem: true
     });
     owl3.owlCarousel({
-                pagination : false,
-		navigation: false,
-        autoPlay:true,
-        stopOnHover:true,
-        lazyLoad:true,
-        items : 7, //10 items above 1000px browser width
-        itemsDesktop : [1300,6], //5 items between 1000px and 901px
-        itemsDesktopSmall : [1100,5], // betweem 900px and 601px
-        itemsTablet: [840,3], //2 items between 600 and 0
-        itemsMobile :[590,1] // itemsMobile disabled - inherit from itemsTablet option
+        pagination: false,
+        navigation: false,
+        autoPlay: true,
+        stopOnHover: true,
+        lazyLoad: true,
+        items: 7, //10 items above 1000px browser width
+        itemsDesktop: [1300, 6], //5 items between 1000px and 901px
+        itemsDesktopSmall: [1100, 5], // betweem 900px and 601px
+        itemsTablet: [840, 3], //2 items between 600 and 0
+        itemsMobile: [590, 1] // itemsMobile disabled - inherit from itemsTablet option
     });
-
-
-
 
 
 })
