@@ -499,7 +499,7 @@ Tags: old,vikings
 
 .panorama-area p {
     font-family: avqest, algerian, "Book Antiqua";
-    color: #500000;
+    color: #660000;
 }
 
 .panorama-area-hover {
@@ -579,6 +579,7 @@ Tags: old,vikings
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
+    margin-top: 15px;
 }
 
 .owl-theme .owl-controls .owl-buttons div {
@@ -620,6 +621,15 @@ Tags: old,vikings
         background-position: center center;
         background-repeat: no-repeat;
     }
+}
+@media handheld
+{
+    #frame .paper {
+        padding: 0;
+        margin: 0;
+        background-image: url("./img/paper2.png");
+
+}
 }
 
 .owl-theme .owl-controls.clickable .owl-buttons div:hover {
@@ -2346,39 +2356,42 @@ p span {
     font-size: 25px;
     line-height: normal;
 }
+strong
+{
+    font-weight: bold;
+    text-align: left;
+    display: block;
+}
 
 a {
     text-decoration: none;
-    color: #500000;
+    color: #660000;
     font-family: avqest, algerian, "Book Antiqua";
-    padding: 20px 15px 20px 15px;
     font-size: 16px;
 }
 
 h3 {
-    color: #500000;
+    color: #660000;
     font-family: avqest, algerian, "Book Antiqua";
     font-weight: normal;
 }
 
 .red {
-    background-color: #500000;
+    background-color: #660000;
 }
 
 a:hover {
-    color: #c06733;
+    color: #B3432B;
 }
 
-.paper .nav a {
-    font-size: 20px;
-}
 
 .nav .shailan-dropdown-menu-widget a {
-    font-size: 19px;
+    font-size: 16px;
 }
 
 .current_page_item a, .current_page_parent a {
-    color: #c06733;
+
+    color: #B3432B;
 }
 
 #icons {
@@ -2390,6 +2403,44 @@ a:hover {
 #icons img {
     padding-left: 20px;
     width: 20px;
+}
+#advert
+{
+    display: inline-block;
+    float: right;
+    position: relative;
+    overflow: hidden;
+    height:192px;
+    width:300px;
+}
+#advert #img_wrap
+{
+    margin: 4px 21px 4px 21px;
+    height: 183px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+#advert img
+{
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+#advert:before
+{
+    content: '';
+    position: absolute;
+    background-image: url("./img/ad_frame.png");
+    top: 0;
+    left:0;
+    height:192px;
+    width:300px;
+    background-size: cover;
+    z-index: 100;
 }
 
 .panorama {
@@ -2413,6 +2464,7 @@ a:hover {
     margin-bottom: -3%;
     padding: 0 50px;
     min-height: 200px;
+    text-align: center;
 }
 
 #frame .nav {
@@ -2428,11 +2480,9 @@ a:hover {
 }
 
 #frame_content {
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block;
     margin-top: 10px;
     position: relative;
-    text-align: center;
 }
 
 .contact_content {
@@ -2450,11 +2500,13 @@ a:hover {
 
 .thumb .link_holder {
     margin-top: 10px;
+    text-align: center;
 }
+
 
 .thumb .link_holder p {
     font-family: avqest, algerian, "Book Antiqua";
-    color: #500000;
+    color: #660000;
     text-align: center;
     padding: 0 10px;
     font-size: 11px;
@@ -2573,11 +2625,13 @@ a:hover {
     font-family: Lucida Sans Unicode;
     text-align: justify;
     margin-left: 20px;
-    max-width: 370px;
+    max-width: 340px;
     display: inline-block;
     vertical-align: top;
     margin-top: 15px;
+    margin-bottom: 37px;
 }
+
 
 .text a {
     font-family: Lucida Sans Unicode;
@@ -2664,27 +2718,9 @@ a:hover {
     }
 }
 
-@media screen and (min-width: 1160px) and (min-height: 700px) {
-    .owl-carousel .item {
-        margin: 25px 0 !important;
-    }
 
-    #owl3 .item {
-        padding: 0 !important;
-    }
+@media screen and (max-width: 700px) {
 
-    .owl-carousel .item p {
-        display: inline-block;
-    }
-}
-
-@media screen and (max-width: 1140px) {
-    .text {
-        width: auto;
-        display: block;
-        margin: 0 auto;
-        padding-top: 0;
-    }
 
     #map {
         width: 260px !important;
@@ -2695,7 +2731,7 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 692px) {
     .text {
         width: auto;
         display: block;
@@ -2703,7 +2739,7 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 842px) {
     .frame_wrap {
         margin: 0 0 20px 0;
     }
@@ -2712,10 +2748,14 @@ a:hover {
         display: block;
         margin: 10px auto;
     }
-
-    .frame_wrap, .frame_wrap:nth-child(2) {
-        display: none;
+    .text {
+        width: auto;
+        display: block;
+        margin: 0 auto;
+        padding-top: 0;
+        max-width: 520px;
     }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -2770,6 +2810,7 @@ a:hover {
         margin-top: 10px;
     }
 
+
     #icons {
         float: none;
         margin-top: 0;
@@ -2789,10 +2830,8 @@ a:hover {
 }
 
 @media screen and (max-width: 550px) {
-    .owl-carousel .item {
-        margin: 0 !important;
-        padding-left: 40px !important;
-        padding-right: 40px !important;
+    #frame_content .item {
+        margin: 30px 32px 36px 32px !important;
     }
 
     .owl-carousel .item p {
@@ -2816,7 +2855,10 @@ a:hover {
         margin: 0;
         background-image: url("./img/paper2.png");
     }
-
+    .thumbs .item
+    {
+        margin: 6px 30px 6px 30px !important;
+    }
     .thumb {
         display: block;
     }
@@ -2833,11 +2875,17 @@ a:hover {
     .thumb .frame_wrap .img_wrap {
         margin: 0;
         height: 150px;
+        width: 150px;
+    }
+    .thumb .img_wrap img{
+        height: 100%;
+        width: auto;
     }
 
     .img_wrap {
         margin: 37px 0 0 0;
     }
+
 
     .item .img_wrap {
         border: 15px double #edb742;
@@ -2923,20 +2971,17 @@ a:hover {
 }
 
 #owl_back {
-    background-color: sandybrown;
-    background-image: url("./img/paper.jpg");
-    background-size: cover;
-    background-position: top center;
+
 }
 
 #owl3 {
 
     margin-top: -10px;
-    border-top: 35px double #edb742;
-    -moz-border-image: url("./img/bottom_frame.png") 95 30 round; /* Firefox */
-    -webkit-border-image: url("./img/bottom_frame.png") 95 30 round; /* Safari */
-    -o-border-image: url("./img/bottom_frame.png") 95 30 round; /* Opera */
-    border-image: url("./img/bottom_frame.png") 95 30 round;
+    border-top: 20px double #edb742;
+    -moz-border-image: url("./img/slider_frame.png") 95 30 round; /* Firefox */
+    -webkit-border-image: url("./img/slider_frame.png") 95 30 round; /* Safari */
+    -o-border-image: url("./img/slider_frame.png") 95 30 round; /* Opera */
+    border-image: url("./img/slider_frame.png") 95 30 round;
     border-bottom: 0;
     border-left: 0;
     border-right: 0;
@@ -3074,7 +3119,7 @@ h1 {
     padding: 100px 0;
     font-size: 20px;
     text-transform: uppercase;
-    color: #500000;
+    color: #660000;
 }
 
 .clearfix:after {
@@ -3146,11 +3191,83 @@ footer p {
 }
 
 ul.dropdown ul li, ul.dropdown-vertical {
-    margin-bottom: 6px;
-    margin-top: 6px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
+ul.children li a
+{
+    font-family:lucida_regular;
+    font-size: 12px !important;
+}
+
 
 #breadcrumbs {
     display: inline-block;
+    font-size: 12px;
+    float: left;
+}
+.widget_polylang
+{
+    display: inline-block;
+}
+.widget_polylang ul li
+{
+    list-style-type: none;
+}
+.nav p
+{
+    font-family: avqest, algerian, "Book Antiqua";
+    font-size: 19px;
+    color: #660000;
+}
+.fb-like{
+    height: 20px;
+    overflow: hidden;
+}
+#frame_content .item
+{
+    display: inline-block;
+    margin: 30px 0 36px 0;
+    text-align: center;
+}
+.thumbs .item
+{
+    display: inline-block;
+    margin: 30px 30px 36px 30px;
+    text-align: center;
+}
 
+
+
+.cloud {
+    margin: 100px auto;
+    background-color: white;
+    box-shadow: inset 1px -2px 10px rgba(0, 0, 0, 0.1), 0 2px 1px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    height: 40px;
+    position: relative;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 50px 30px;
+    border-top-right-radius: 50px 30px;
+}
+.cloud:before,
+.cloud:after {
+    box-shadow: inset 0px -22px rgba(255, 255, 255, 1), inset 1px -2px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    border-radius: 50%;
+    content:'';
+    background: white;
+}
+.cloud:before {
+    top: -15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+}
+.cloud:after {
+    top: -20px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
 }

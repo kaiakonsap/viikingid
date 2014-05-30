@@ -16,9 +16,7 @@
 	Theme Support
 \*------------------------------------*/
 
-DEFINE('PAKUME_ID', 68);
-DEFINE('PILTIDE_ID', 79);
-DEFINE('MENU_ID', 75);
+
 
 if (!isset($content_width)) {
     $content_width = 900;
@@ -109,7 +107,7 @@ function img($atts, $content = null)
 function text($atts, $content = null)
 {
     $div_content = apply_filters('the_content', $content);
-    return '<div class="text">' . $div_content . '</div>';
+    return '<div class="text"><p>' . $div_content . '</p></div>';
 }
 
 add_shortcode('slaid', 'item');
@@ -218,7 +216,7 @@ if (function_exists('register_sidebar')) {
 
     // Define Sidebar Widget Area 2
     register_sidebar(array(
-        'name' => __('Widget Area 2', 'html5blank'),
+        'name' =>'Keeled',
         'description' => __('Description for this widget-area...', 'html5blank'),
         'id' => 'widget-area-2',
         'before_widget' => '<div id="%1$s" class="%2$s">',

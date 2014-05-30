@@ -2,10 +2,10 @@
 get_header("header1"); ?>
 
 
-
+<div class="cloud"></div>
 <div class="wrapper panorama">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/panoraam2.png" class="advancedpanorama" width="3220"
-         height="508" usemap="testmap" alt="Atelier du sculpteur"/>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/background.png" class="advancedpanorama" width="2343"
+         height="425" usemap="testmap" alt="Atelier du sculpteur" title="meelelahutus"/>
 
     <?php
     if (is_array(get_post_custom_values('category'))) {
@@ -21,7 +21,7 @@ get_header("header1"); ?>
             $content = the_content($post->ID);?>
 
             <area shape="rect"
-                  coords="<?php  if ($posttags) {
+                  coords="<?php  if (get_the_tags()) {
                       $len = count($posttags);
                       $count = 0;
                       foreach ($posttags as $tag) {
@@ -34,7 +34,7 @@ get_header("header1"); ?>
                       }
                   }?>" href="<?php echo get_permalink($content) ?>" alt='<?php the_post_thumbnail(); ?>'/>
 
-            <input type="text" class="title" value="<?php the_title() ?>"/>
+
 
         <?php endwhile; ?>
 

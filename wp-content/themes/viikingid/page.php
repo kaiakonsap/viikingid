@@ -6,28 +6,29 @@ get_header("header2"); ?>
         <img class="frame" src="<?php echo get_template_directory_uri(); ?>/img/top_frame.png" alt="frame"/>
 
         <div id="paper" class="paper">
-            <nav class="nav">
-                <div id="breadcrumbs"> <?php if (function_exists('show_full_breadcrumb'))
-                        show_full_breadcrumb(
-                            array(
-                                'labels' => array(
-                                    'local' => false, // set FALSE to hide
-                                    'home' => 'Esileht'
+
+            <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
+                <div class="nav">
+                    <div id="breadcrumbs"> <?php if (function_exists('show_full_breadcrumb'))
+                            show_full_breadcrumb(
+                                array(
+                                    'labels' => array(
+                                        'local' => false, // set FALSE to hide
+                                        'home' => 'Esileht'
+                                    )
                                 )
-                            )
-                        ); ?>
-                </div>
-            </nav>
+                            ); ?>
+                    </div>
+              <p><?php the_title() ?></p>
+            </div>
 
 
             <div id="frame_content">
+                <div class="item">
+                <?php edit_post_link(); ?>
+                       <?php the_content(); ?>
 
-                <div id="owl2" class="owl-carousel owl-theme">
-
-                    <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-                        <?php the_content(); ?>
-                        <?php edit_post_link(); ?>
 
                     <?php endwhile; ?>
 
@@ -40,12 +41,11 @@ get_header("header2"); ?>
 
                         </article>
                         <!-- /article -->
-
-                    <?php endif; ?>
-
-
                 </div>
             </div>
+            <?php endif; ?>
+
+        </div>
         </div>
         <img class="frame" src="<?php echo get_template_directory_uri(); ?>/img/bottom_frame.png" alt="frame"/>
     </div>

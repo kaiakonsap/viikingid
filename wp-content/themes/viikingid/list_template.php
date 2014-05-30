@@ -7,25 +7,26 @@ get_header("header2"); ?>
         <img class="frame" src="<?php echo get_template_directory_uri(); ?>/img/top_frame.png" alt="frame"/>
 
         <div id="paper" class="paper">
-            <nav class="nav">
-                <div id="breadcrumbs"> <?php if (function_exists('show_full_breadcrumb'))
-                        show_full_breadcrumb(
-                            array(
-                                'labels' => array(
-                                    'local' => false, // set FALSE to hide
-                                    'home' => 'Esileht'
-                                )
+            <div id="breadcrumbs"> <?php if (function_exists('show_full_breadcrumb'))
+                    show_full_breadcrumb(
+                        array(
+                            'labels' => array(
+                                'local' => false, // set FALSE to hide
+                                'home' => 'Esileht'
                             )
-                        ); ?>
-                </div>
+                        )
+                    ); ?>
+            </div>
+            <nav class="nav">
+           <?php $post = $wp_query->get_queried_object();
+
+           $pagename = $post->post_name;
+           echo $pagename?>
             </nav>
-
-
 
             <div class="slaider_container thumbs">
 
 
-                <div id="owl1" class="owl-carousel owl-theme">
                     <?php
                     if (is_array(get_post_custom_values('category'))) {
                         $cat = implode(",", get_post_custom_values('category'));
@@ -50,7 +51,8 @@ get_header("header2"); ?>
 
                                     </div>
                                     <div class="link_holder"><?php the_title(); ?></div>
-                                    <?php edit_post_link(); ?> </div>
+                                    <?php edit_post_link();?>
+                                </div>
                             </a>
                         </div>
 
@@ -72,7 +74,6 @@ get_header("header2"); ?>
                     <?php wp_reset_query(); ?>
 
 
-                </div>
             </div>
         </div>
         <img class="frame" src="<?php echo get_template_directory_uri(); ?>/img/bottom_frame.png" alt="frame"/>

@@ -1,4 +1,4 @@
-</div>
+
 <footer class="footer" role="contentinfo">
 
     <!-- copyright -->
