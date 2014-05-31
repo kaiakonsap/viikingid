@@ -7,7 +7,7 @@ get_header("header2"); ?>
 
         <div id="paper" class="paper">
 
-            <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
 
                 <div class="nav">
                     <div id="breadcrumbs"> <?php if (function_exists('show_full_breadcrumb'))
@@ -20,17 +20,22 @@ get_header("header2"); ?>
                                 )
                             ); ?>
                     </div>
+                <?php if (have_posts()): while (have_posts()) : the_post(); ?>
               <p><?php the_title() ?></p>
+                <?php endwhile; ?>
+                <?php endif; ?>
             </div>
 
-
             <div id="frame_content">
+
                 <div class="item">
+                    <?php if (have_posts()): while (have_posts()) : the_post(); ?>
                 <?php edit_post_link(); ?>
                        <?php the_content(); ?>
 
 
                     <?php endwhile; ?>
+
 
                     <?php else: ?>
 
@@ -41,14 +46,15 @@ get_header("header2"); ?>
 
                         </article>
                         <!-- /article -->
+                    <?php endif; ?>
                 </div>
             </div>
-            <?php endif; ?>
+
 
         </div>
-        </div>
+
         <img class="frame" src="<?php echo get_template_directory_uri(); ?>/img/bottom_frame.png" alt="frame"/>
-    </div>
+</div>
 </div>
 
 </div>
