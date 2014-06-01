@@ -1,0 +1,443 @@
+/*
+Theme Name: viikingid_vana
+Author: Kaia
+Description: Vana Viikingite Küla teema
+Tags: old,vikings
+*/
+html { height: 100%;}
+body {
+background: url(./img/taust4.jpeg);
+text-align:center;
+text-align:left;
+font-family: Cambria,'Palatino Linotype','Book Antiqua','URW Palladio L',serif;
+}
+
+div.box{
+margin:10px auto;
+width:850px;
+height:auto;
+text-align:center;
+}
+
+ 
+
+div.language {
+text-align:left;
+}
+
+div.FF_IE {
+padding:10px;
+height:80px !important; /*moz width*/
+height:100px; /*IE width*/
+}
+
+div.mainmenu {
+background: url(./img/menu1.jpg) no-repeat;
+width:850px;
+}
+
+div.main {
+margin-top:-5px;
+background: url(./img/content2.jpg) repeat-y;
+text-align:center;
+height:auto;
+width:100%;
+}
+div.left {
+float:left;
+width:200px;
+margin:80px 0 0 0;
+text-align:left;
+}
+
+.slideshowContainer {
+
+	width: 750px;
+	height: 563px;
+
+}
+
+.loading {
+	background: url(./img/loading.gif) center no-repeat;
+}
+
+.slideshowThumbnail {
+	outline: none;
+}
+
+.slideshowThumbnail img {
+
+}
+
+a:hover.slideshowThumbnail img {
+
+}
+
+.current img {
+
+}
+
+
+
+#thumbnails {
+width: 130px;
+	float: left; display: none;
+}
+
+
+
+div.module_menu {
+position: relative;
+margin-left: 11px;
+padding-left: 22px;
+padding-right: 22px;
+background-image: url("./img/advertize.png");
+background-repeat: repeat-y;
+background-size: 189px;
+background-position: 0px 4px;
+}
+div.module_menu:before
+{
+content: "";
+position: absolute;
+width: 189px;
+height: 31px;
+top: -30px;
+left: 0;
+background-image: url("./img/ad_top.png");
+background-repeat: no-repeat;
+background-size: 193px;
+background-position-y: 3px;
+}
+div.module_menu:after
+{
+content: "";
+position: absolute;
+width: 189px;
+height: 40px;
+bottom: -40px;
+left: 0;
+background-image: url("./img/ad_bottom.png");
+background-size: 189px;
+background-repeat: no-repeat;
+}
+
+.pakkumine
+{
+display: block;
+margin-bottom:14px;
+}
+.pakkumine a
+{
+background-color:#5a3e22;
+background-image:url("./img/menu_taust.png");
+background-position: right;
+color:antiquewhite;
+display: inline-block;
+}
+.pakkumine p
+{
+padding:11px 11px;
+display: inline-block;
+}
+
+div.module_menu h3{
+margin:0 0 -10px 40px;
+  font-family: Avqest, Book Antiqua, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFDEAD;
+  text-decoration: underline;
+}
+
+div.module_menu ul {
+list-style:none;
+list-style-position:outside;
+/*   color: #FFDEAD; */
+/* margin-left:-25px; */
+
+}
+
+div.module_menu ul li {
+padding: 0 0 10px 20px;
+background:transparent url(./img/kilp12.png) no-repeat 0 2px;
+
+}
+
+
+/*div.module_menu ul li ul li {
+padding: 0 0 0 46px;
+margin-left:-40px;
+background:transparent url(./img/arrow_head_2.png) no-repeat 0 4px;
+height:80px !important; moz width
+height:100px; IE width
+}*/
+
+div.module_menu ul li ul li {
+padding: 0 0 0 40px;
+margin:0 0 0 -60px;
+background:transparent url(./img/arrow_head_2.png) no-repeat 0 4px;
+
+}
+
+/*div.module_menu ul li ul {
+margin-left:-20px; 
+font-size:0.9em;
+}*/
+
+div.module_menu ul li a:link, div.module_menu ul li a:visited {
+  font-family: Avqest, Book Antiqua, Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+}
+div.module_menu #current a {
+  font-family: Avqest, Book Antiqua, Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+color: white;
+/*   color: #FFDEAD; */
+}
+div.module_menu div div div ul li a:hover, div.module_menu #current a:hover {
+text-decoration: underline;
+
+}
+
+div.content {
+margin:5px 0 0 250px;
+padding-top:10px;
+}
+div.info {
+
+}
+div.sisu {
+margin:20px 60px 0 0;
+text-align:left;
+line-height:1.5em;
+font-size: 16px;
+min-height:400px;
+}
+
+div.componentheading{
+margin-top:10px;
+}
+span.pagination span, span.pagination a{
+padding:2px;
+text-decoration: none;
+}
+
+
+div.moduletable{
+text-align:left;
+font-size: 14px;
+margin-left:-20px;
+text-decoration: none;
+font-weight:bold;
+}
+
+div.moduletable a{
+text-decoration: none;
+font-weight:bold;
+color:black;
+}
+
+div.moduletable a:hover{
+color:#993300;
+}
+
+table img{
+border-style:none;
+}
+a{
+margin-left:2px;
+text-decoration: none;
+}
+form{
+padding-bottom:20px;
+}
+.contentpaneopen
+{
+margin-bottom:20px;
+}
+.contentpaneopen table 
+{
+width:100%;
+margin-bottom:7px;
+}
+
+.contentpaneopen table tr td
+{
+padding: 10px 0;
+}
+.contentpaneopen .contact tr td:nth-child(2)
+{
+text-align:right;
+}
+.contentheading{font-weight:bold; font-size:21px; font-family: avqest;}
+
+h1,h2,h3,h4,h4{font-weight:bold;}
+h1{font-size:20px;}
+h2{font-size:18px;}
+h3{font-size:16px;}
+h4{font-size:14px;}
+h5{font-size:12px;}
+h6{font-size:10px;}
+div.footer {
+background: url(./img/footer2.jpg) no-repeat;
+text-align:center;
+height:50px;
+font-size:12px;
+line-height:55px;
+}
+div.footer p{
+font-size:10px;
+text-align:right;
+}
+div.footer span{
+margin-right:50px;
+}
+.rawimages img {
+border: none;
+margin:2px;
+}
+/*//////////////////////////////////*/
+div.mainmenu1 {
+margin:0 auto;
+background: url(./img/menu1.jpg) no-repeat;
+height:70px;
+width:850px;
+text-align:center;
+}
+
+div.menukast {
+margin: 0 10px 0 20px;
+width: 827px;
+}
+
+div.menukast ul a {
+  font-family: Avqest, Book Antiqua, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  display:block;
+  color: #FFDEAD;
+  text-decoration: none;
+  text-align: center;
+}
+div.menukast #current a {
+  font-family: Avqest, Book Antiqua, Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+
+  display:block;
+  color: #FFDEAD;
+  text-decoration: underline;
+}
+
+div.menukast #current a:hover, div.menukast ul a:hover {
+  color: #DAA520;
+}
+
+div.menukast ul
+{
+list-style-type:none;
+padding:0px;
+margin:0px;
+}
+div.menukast li:first-child
+{
+background-image:none;
+}
+div.menukast li
+{
+background-image:url(./img/1.png);
+background-repeat:no-repeat;
+background-position:0px 0px;
+padding-left:14px;
+max-width:13%;
+display:inline-block;
+margin-right:5px;
+margin: 3px 0;
+
+}
+ul.dropdown ul li, ul.dropdown-vertical {
+max-width: none !important;
+}
+ul.dropdown {
+white-space: normal;
+}
+ul.dropdown > li {
+float: none;
+}
+
+div.menukast img {
+margin-top:20px;
+border-style:none;
+background-image:url(./img/1.png);
+}
+
+div.module_menu img {
+border-style:none;
+}
+
+.contentpaneopen img{margin:10px;}
+.module_menu img{margin:5px;}
+div.uss img, img.slide{margin:0;}
+
+div#rotator {
+background: url(./img/teine.jpg) no-repeat;
+margin:auto;
+text-align:center;
+height:190px;
+width: 750px;
+overflow:hidden;
+position: relative;
+z-index:-100;
+}
+*
+{margin: 0;padding: 0;}
+#rotator{overflow: hidden;margin: -580px auto 10px;position: relative;width: 750px;}
+#rotator img{border: 0;	width: 750px;}
+p{text-align: left;}
+
+body {background-image:url(./img/taust4.jpeg);}
+#intro {margin:  auto ;	width: 800px;height: 631px; position: relative;}
+#footer{text-align: center;margin-top:200px;}
+#language {margin:auto ;width: 800px;height: 20px; position: relative; text-align: left;}
+img {border-style:none}
+.frame_wrap
+{
+display:block;
+
+}
+.img_wrap
+{
+display:inline-block;
+}
+.img_wrap img
+{
+width:450px;
+}
+.sisu img
+{
+max-width:450px !important;
+}
+
+div.uss {
+margin:0 auto;
+height:220px;
+margin-top:-195px;
+/* position: relative; */
+/* z-index:200; */
+}
+div.uss img {
+margin-top:-5px;
+}
+#slider .slide
+{
+margin:-30px;
+}
+li.latestnews a {text-decoration: underline;}
+ .gform_button
+ {
+ padding:10px;
+ }
+ .gform_wrapper ul.gform_fields {
+overflow: hidden;
+}

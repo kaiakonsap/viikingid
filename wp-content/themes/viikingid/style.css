@@ -2274,6 +2274,12 @@ ol.linenums li {
         overflow: visible !important;
     }
 }
+    @media (max-width: 930px) {
+    #breadcrumbs
+    {
+    display: none !important;
+    }
+}
 
 * {
     margin: 0;
@@ -2389,10 +2395,19 @@ a:hover {
     font-size: 16px;
 }
 
-.current_page_item a, .current_page_parent a {
+.current_page_item a{
 
     color: #B3432B;
 }
+.current_page_item .children li a, .current_page_parent .children li a {
+
+    color: #660000;;
+}
+.current_page_parent .children .current_page_item a, .current_page_parent a {
+
+    color: #B3432B;
+}
+
 
 #icons {
     display: inline-block;
@@ -2492,6 +2507,9 @@ a:hover {
 .thumbs {
     margin-top: 10px;
     padding-bottom: 58px;
+    display: inline-block;
+    width: 85%;
+    text-align: left;
 }
 
 .thumb {
@@ -2759,6 +2777,7 @@ a:hover {
 }
 
 @media screen and (max-width: 600px) {
+
     header {
         padding: 23px 14px 14px 14px;
         text-align: right;
@@ -2787,9 +2806,16 @@ a:hover {
     .navbar-toggle {
         display: inline-block !important;
     }
-
+    .frame {
+        display: none;
+    }
+    #frame .paper {
+        padding: 0;
+        margin: 0;
+        background-image: url("./img/paper2.png");
+    }
     #frame .nav {
-        padding-top: 8px;
+        padding-top: 35px;
     }
 
     .nav, header .nav {
@@ -2846,15 +2872,7 @@ a:hover {
         width: 100%
     }
 
-    .frame {
-        display: none;
-    }
 
-    #frame .paper {
-        padding: 0;
-        margin: 0;
-        background-image: url("./img/paper2.png");
-    }
     .thumbs .item
     {
         margin: 6px 30px 6px 30px !important;
@@ -3160,7 +3178,7 @@ footer p {
 }
 
 .gform_wrapper .top_label input.medium {
-    width: 80% !important;
+    width: 80%;
     padding: 2px 2px 2px 2px;
 !important;
     background-color: #ffefd5;
@@ -3205,6 +3223,9 @@ ul.children li a
     display: inline-block;
     font-size: 12px;
     float: left;
+    width: 300px;
+    text-align: left;
+    width: 300px;
 }
 .widget_polylang
 {

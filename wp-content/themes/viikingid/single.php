@@ -18,12 +18,13 @@
                             )
                         ); ?>
                 </div>
-                <?php if (have_posts()): while (have_posts()) :
-                the_post(); ?>
-                <p><?php the_title() ?></p>
+
+                <p><?php single_post_title(); ?></p>
             </nav>
             <div id="frame_content">
                 <div class="item">
+                    <?php if (have_posts()): while (have_posts()) :
+                        the_post(); ?>
                     <?php edit_post_link(); ?>
                     <?php the_content(); ?>
 
@@ -40,10 +41,7 @@
                         </article>
                         <!-- /article -->
 
-                    <?php
-                    endif; ?>
-
-
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
