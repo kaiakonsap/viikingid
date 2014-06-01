@@ -28,7 +28,7 @@ get_header("header2"); ?>
 
             <div id="frame_content">
 
-                <div class="item">
+
                     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
                 <?php edit_post_link(); ?>
                        <?php the_content(); ?>
@@ -47,7 +47,7 @@ get_header("header2"); ?>
                         </article>
                         <!-- /article -->
                     <?php endif; ?>
-                </div>
+
             </div>
 
 

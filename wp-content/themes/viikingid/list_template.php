@@ -7,21 +7,19 @@ get_header("header2"); ?>
         <img class="frame" src="<?php echo get_template_directory_uri(); ?>/img/top_frame.png" alt="frame"/>
 
         <div id="paper" class="paper">
-            <div id="breadcrumbs"> <?php if (function_exists('show_full_breadcrumb'))
-                    show_full_breadcrumb(
-                        array(
-                            'labels' => array(
-                                'local' => false, // set FALSE to hide
-                                'home' => 'Esileht'
-                            )
-                        )
-                    ); ?>
-            </div>
-            <nav class="nav">
-           <?php $post = $wp_query->get_queried_object();
 
-           $pagename = $post->post_name;
-           echo $pagename?>
+            <nav class="nav">
+                <div id="breadcrumbs"> <?php if (function_exists('show_full_breadcrumb'))
+                        show_full_breadcrumb(
+                            array(
+                                'labels' => array(
+                                    'local' => false, // set FALSE to hide
+                                    'home' => 'Esileht'
+                                )
+                            )
+                        ); ?>
+                </div>
+           <p><?php  single_post_title();?></p>
             </nav>
 
             <div class="slaider_container thumbs">

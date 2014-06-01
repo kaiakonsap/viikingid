@@ -52,9 +52,7 @@
 
         <div id="icons">
             <?php if ( dynamic_sidebar('Keeled') ) : else : endif; ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/fb.png" alt="alt_text"/>
-            <div class="fb-like" data-href="https://www.facebook.com/Viikingitekyla" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
-
+            <div class="fb-like" data-href="https://www.facebook.com/Viikingitekyla" data-width="24" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
         </div>
         <!-- nav -->
         <a href="#">

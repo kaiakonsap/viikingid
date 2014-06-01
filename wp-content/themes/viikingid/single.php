@@ -22,31 +22,23 @@
                 <p><?php single_post_title(); ?></p>
             </nav>
             <div id="frame_content">
-                <div class="item">
-                    <?php if (have_posts()): while (have_posts()) :
-                        the_post(); ?>
+                    <?php if (have_posts()): while (have_posts()) :the_post(); ?>
                     <?php edit_post_link(); ?>
                     <?php the_content(); ?>
-
-
                     <?php endwhile; ?>
-
                     <?php else: ?>
-
                         <!-- article -->
                         <article>
-
                             <h2><?php _e('Sorry, nothing to display.', 'html5blank'); ?></h2>
-
                         </article>
                         <!-- /article -->
 
                     <?php endif; ?>
-                </div>
             </div>
         </div>
         <img class="frame" src="<?php echo get_template_directory_uri(); ?>/img/bottom_frame.png" alt="frame"/>
     </div>
+</div>
 </div>
 <?php get_footer("footer2"); ?>
 

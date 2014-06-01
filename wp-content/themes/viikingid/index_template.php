@@ -2,7 +2,7 @@
 get_header("header1"); ?>
 
 
-<div class="cloud"></div>
+<div class="cloud"><p><a href="#"> Testime pilve</a></p></div>
 <div class="wrapper panorama">
     <img src="<?php echo get_template_directory_uri(); ?>/img/background.png" class="advancedpanorama" width="2343"
          height="425" usemap="testmap" alt="Atelier du sculpteur" title="meelelahutus"/>
