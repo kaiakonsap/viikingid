@@ -36,7 +36,11 @@
     <header>
         <div id="icons">
             <?php if ( dynamic_sidebar('Keeled') ) : else : endif; ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/en_US.png"/>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/ru_RU.png"/>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/fi.png"/>
             <div class="fb-like" data-href="https://www.facebook.com/Viikingitekyla" data-height="24" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+
         </div>
         <!-- nav -->
         <button type="button" class="navbar-toggle">
