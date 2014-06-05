@@ -2281,7 +2281,16 @@ ol.linenums li {
     {
     float: none !important;
     position: relative !important;
+    text-align: center !important;
     }
+        .nav p
+    {
+            display: none;
+        }
+        #frame_content table
+        {
+            width: 80% !important;
+        }
 }
 
 * {
@@ -2620,7 +2629,7 @@ a:hover {
     width: 100%;
     background-image: url("./img/frame2.png");
     background-size: cover;
-    z-index: 100;
+    z-index: 4;
 }
 
 .thumb .frame_wrap:before {
@@ -2753,6 +2762,17 @@ a:hover {
         margin-left: 60px;
     }
 }
+@media screen and (max-width: 1213px) {
+    #frame_content {
+        max-width: 740px;
+    }
+    .thumbs
+    {
+
+        max-width: 787px;
+    }
+
+}
 
 
 @media screen and (max-width: 700px) {
@@ -2774,8 +2794,13 @@ a:hover {
         margin: 0 auto;
     }
 }
-
-@media screen and (max-width: 842px) {
+@media screen and (max-width: 950px)
+{
+    .thumbs{
+    max-width: 524px;
+    }
+}
+@media screen and (max-width: 880px) {
 
     .frame_wrap{
         display: block;
@@ -2791,7 +2816,7 @@ a:hover {
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 
     header {
         padding: 23px 14px 14px 14px;
@@ -2801,7 +2826,6 @@ a:hover {
     a {
         font-family: lucida_regular;
         text-transform: uppercase;
-        display: block;
         padding: 13px 15px 13px 15px;
         font-size: 14px;
     }
@@ -2821,13 +2845,45 @@ a:hover {
     .navbar-toggle {
         display: inline-block !important;
     }
+    .widget_nice_navigation
+    {
+        display: block !important;
+    }
     .frame {
+
         display: none;
+    }
+    #frame {
+        overflow: visible;
     }
     #frame .paper {
         padding: 0;
+        margin: 0 0 10px;
+        position: relative;
+        background-image: none;
+       background-color: #f2cb9f;
+        overflow: visible;
+    }
+    #frame .paper:before, #frame .paper:after {
+        padding: 0;
         margin: 0;
-        background-image: url("./img/paper2.png");
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 35px;
+        content: '';
+    }
+    #frame .paper:before {
+
+        background-image: url("./img/bg_edge.png");
+        background-size: cover;
+        top: -7px;
+        left: 0;
+    }    #frame .paper:after {
+
+        background-image: url("./img/bg_edge2.png");
+       bottom: -9px;
+        left: 0;
     }
     #frame .nav {
         padding-top: 35px;
@@ -2868,9 +2924,7 @@ a:hover {
     .navbar-collapse {
         display: none;
     }
-}
 
-@media screen and (max-width: 550px) {
     #frame_content .item {
         margin: 30px 32px 36px 32px !important;
     }
@@ -2884,17 +2938,16 @@ a:hover {
     }
 
     .frame_wrap {
-        width: 100%
+        overflow: visible;
     }
 
 
     .thumbs .item
     {
         margin: 6px 30px 6px 30px !important;
+        display: block !important;
     }
-    .thumb {
-        display: block;
-    }
+
 
     .thumb .frame_wrap {
         width: 100%;
@@ -2916,11 +2969,12 @@ a:hover {
     }
 
     .img_wrap {
-        margin: 37px 0 0 0;
+        margin: 37px 0 20px 0;
+
     }
 
 
-    .item .img_wrap {
+   .thumbs .img_wrap, #frame_content .img_wrap .fold {
         border: 15px double #edb742;
         -webkit-border-image-source: url(./img/border-image-2.png);
         -webkit-border-image-slice: 28;
@@ -2947,6 +3001,13 @@ a:hover {
         border-image-width: 15px;
         border-image-outset: 0;
         border-image-repeat: round;
+    }
+    #frame_content .img_wrap .fold img
+    {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
     #contact {
@@ -2983,6 +3044,16 @@ a:hover {
 
     .left {
         font-weight: bold;
+    }
+    #breadcrumbs
+    {
+        display: block !important;
+        max-width: none !important;
+    }
+    #frame_content table
+    {
+        width: 95% !important;
+
     }
 }
 
@@ -3192,8 +3263,12 @@ footer p {
     background-color: rgba(265, 265, 265, 0.6) !important;
 }
 
+.gform_wrapper {
+   text-align: center;
+    max-width: 100% !important;
+}
 .gform_wrapper .top_label input.medium {
-    width: 80%;
+    width: 80% !important;
     padding: 2px 2px 2px 2px;
 !important;
     background-color: #ffefd5;
@@ -3243,6 +3318,8 @@ ul.children li a
     float: left;
     text-align: left;
     max-width: 300px;
+    font-family:lucida_regular;
+    color: #422b1e;
 }
 .widget_polylang
 {
@@ -3325,4 +3402,37 @@ ul.children li a
 .post-edit-link
 {
     display: block;
+}
+#frame_content table
+{
+    width: 60%;
+
+    display: block;
+    margin: 0 auto 25px;
+    line-height: 17px;
+    font-family: lucida_regular;
+    color: #422b1e;
+}
+.widget_nice_navigation
+{
+    display: none;
+}
+.link
+{
+    position: relative;
+    display: inline-block;
+}
+.lightbox
+{
+    position: absolute;
+    z-index: 5;
+    left: 40px;
+    top: 0;
+    bottom: 36px;
+    opacity: 0;
+}
+.lightbox img
+{
+    width: 100%;
+    height: 100%;
 }

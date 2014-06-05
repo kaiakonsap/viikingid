@@ -100,8 +100,8 @@ function item($atts, $content = null)
 function img($atts, $content = null)
 {
     $div_content = apply_filters('the_content', $content);
-    return '    <div class="frame_wrap center">
-					<div class="img_wrap"><span class="fold"> ' . $div_content . '</span></div></div>';
+    return '    <div class="link"><span class="lightbox">'. $div_content .'</span><div class="frame_wrap center">
+					<div class="img_wrap"><span class="fold"> ' . $div_content . '</span></div></div></div>';
 }
 
 function text($atts, $content = null)
@@ -213,7 +213,6 @@ if (function_exists('register_sidebar')) {
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
-
     // Define Sidebar Widget Area 2
     register_sidebar(array(
         'name' =>'Keeled',
@@ -224,6 +223,16 @@ if (function_exists('register_sidebar')) {
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
+    register_sidebar(array(
+        'name' => 'Akordion',
+        'description' => "Akkordionmenüü",
+        'id' => 'widget-area-3',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+
 }
 
 // Remove wp_head() injected Recent Comment styles

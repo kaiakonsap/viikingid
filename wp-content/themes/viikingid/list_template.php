@@ -15,6 +15,9 @@ get_header("header2"); ?>
                                 'labels' => array(
                                     'local' => false, // set FALSE to hide
                                     'home' => 'Esileht'
+                                ),
+                                'page_ancestors' => array(
+                                    'showLink' => true
                                 )
                             )
                         ); ?>

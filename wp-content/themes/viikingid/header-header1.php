@@ -10,10 +10,10 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
     <?php wp_head(); ?>
-
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.10.2.min.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/jquery.panorama.css"
           media="screen"/>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.10.2.min.js"></script>
+
     <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.panorama.js"></script>
 
@@ -52,9 +52,6 @@
 
         <div id="icons">
             <?php if ( dynamic_sidebar('Keeled') ) : else : endif; ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/en_US.png"/>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/ru_RU.png"/>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/fi.png"/>
             <div class="fb-like" data-href="https://www.facebook.com/Viikingitekyla" data-width="24" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
         </div>
         <!-- nav -->

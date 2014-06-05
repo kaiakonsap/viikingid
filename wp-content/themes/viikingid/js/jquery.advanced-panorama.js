@@ -6,9 +6,9 @@
  // Copyright (c) 2008 Arnault Pachot
  // licence : GPL
  ========================================================= */
-(function ($) {
-    $.fn.advancedpanorama = function (options) {
-        this.each(function () {
+(function($) {
+    $.fn.advancedpanorama = function(options) {
+        this.each(function(){
             var settings = {
                 viewport_width: window.width,
                 speed: 20000,
@@ -27,9 +27,8 @@
             var mapId = panoImg.attr('usemap');
             var areaId = 0;
 
-
-            $('map[name=' + mapId + ']').find('area').each(
-                function () {
+            $('map[name='+mapId+']').find('area').each(
+                function() {
                     switch ($(this).attr("shape").toLowerCase()) {
                         case 'rect' :
                             var areacoord = $(this).attr("coords");
@@ -41,20 +40,18 @@
                             }
                             var areaclass = $(this).attr("class");
                             if (areaclass != '')
-                                areaclass = " " + areaclass;
+                                areaclass = " "+areaclass;
                             var areahref = $(this).attr("href");
                             var areacoordArray = coords_fill(areacoord);
-                            panoContainer.append("<a class='panorama-area area" + areaId + areaclass + "' style='position: absolute; left: " + areacoordArray[0] + "px; top: " + areacoordArray[1] + "px; width: " + (areacoordArray[2] - areacoordArray[0]) + "px; height: " + (areacoordArray[3] - areacoordArray[1]) + "px;' onmouseover='javascript:area_hover(" + areaId + ")' onmouseout='javascript:area_out(" + areaId + ")' href='" + areahref + "' title='" + areaalt + "'><p>" + imgTitle + "</p>'+areaalt+'&nbsp;</a>");
-                            panoContainer.append("<a class='panorama-area area" + areaId + areaclass + "' style='position: absolute; left: " + (panoImgWidth + parseInt(areacoordArray[0])) + "px; top: " + areacoordArray[1] + "px; width: " + (areacoordArray[2] - areacoordArray[0]) + "px; height: " + (areacoordArray[3] - areacoordArray[1]) + "px;' onmouseover='javascript:area_hover(" + areaId + ")' onmouseout='javascript:area_out(" + areaId + ")' href='" + areahref + "' title='" + areaalt + "'>&nbsp;</a>");
+                            panoContainer.append("<a class='panorama-area area"+areaId+areaclass+"' style='position: absolute; left: "+areacoordArray[0]+"px; top: "+areacoordArray[1]+"px; width: "+(areacoordArray[2]-areacoordArray[0])+"px; height: "+(areacoordArray[3]-areacoordArray[1])+"px;' onmouseover='javascript:area_hover("+areaId+")' onmouseout='javascript:area_out("+areaId+")' href='"+areahref+"' title='"+areaalt+"'><p>"+areaalt+"</p>&nbsp;</a>");
+                            panoContainer.append("<a class='panorama-area area"+areaId+areaclass+"' style='position: absolute; left: "+(panoImgWidth+parseInt(areacoordArray[0]))+"px; top: "+areacoordArray[1]+"px; width: "+(areacoordArray[2]-areacoordArray[0])+"px; height: "+(areacoordArray[3]-areacoordArray[1])+"px;' onmouseover='javascript:area_hover("+areaId+")' onmouseout='javascript:area_out("+areaId+")' href='"+areahref+"' title='"+areaalt+"'>&nbsp;</a>");
                             areaId++;
                             break;
-                        case 'circle' :
-                            break;
-                        case 'poly' :
-                            break;
+                        case 'circle' :  break;
+                        case 'poly' :  break;
                     }
                 }).remove();
-            panoContainer.find('a.panorama-area').bind('click', function () {
+            panoContainer.find('a.panorama-area').bind('click', function(){
                 $(panoContainer).stop();
             });
 
@@ -62,7 +59,7 @@
     };
 
 
-    $(document).ready(function () {
+    $(document).ready(function(){
         $(".panorama-viewport").advancedpanorama();
     });
 
@@ -70,22 +67,22 @@
 })(jQuery);
 
 function coords_fill(mycoords) {
-    var position1 = 0;
-    var position2 = 0;
+    var position1=0;
+    var position2=0;
 
     var tabresult = new Array();
     while ((position2 = mycoords.indexOf(',', position1)) >= 0) {
         tabresult.push(mycoords.substring(position1, position2));
-        position1 = position2 + 1;
-        position2 = position1 + 1;
+        position1 = position2+1;
+        position2 = position1+1;
     }
     tabresult.push(mycoords.substring(position1));
 
     return tabresult;
 }
 function area_hover(areaId) {
-    $('.area' + areaId).addClass('panorama-area-hover').addClass('area' + areaId + '-hover');
+    $('.area'+areaId).addClass('panorama-area-hover').addClass('area'+areaId+'-hover');
 }
 function area_out(areaId) {
-    $('.area' + areaId).removeClass('panorama-area-hover').removeClass('area' + areaId + '-hover');
+    $('.area'+areaId).removeClass('panorama-area-hover').removeClass('area'+areaId+'-hover');
 }
