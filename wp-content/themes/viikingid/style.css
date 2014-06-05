@@ -3436,3 +3436,15 @@ ul.children li a
     width: 100%;
     height: 100%;
 }
+#TB_window {
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+#TB_window img#TB_Image
+{
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+.tb-close-icon {
+    color: #ADD8E6;}
