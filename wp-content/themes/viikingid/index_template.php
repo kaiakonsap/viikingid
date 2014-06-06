@@ -16,41 +16,10 @@ get_header("header1"); ?>
         }
         ?>
         <map id="testmap" name="testmap">
-            <?php if (have_posts()): while (have_posts()) : the_post();
-                $posttags = get_the_tags();
-                $content = the_content($post->ID);?>
+            <area shape="rect" coords="1653,72,1839,255" href="#" alt="viikingite külast" />
 
-                <area shape="rect"
-                      coords="<?php  if (get_the_tags()) {
-                          $len = count($posttags);
-                          $count = 0;
-                          foreach ($posttags as $tag) {
-                              if ($count == ($len - 1)) {
-                                  echo $tag->name;
-                              } else {
-                                  echo $tag->name . ',';
-                              }
-                              $count++;
-                          }
-                      }?>" href="<?php echo get_permalink($content) ?>" alt='<?php the_post_thumbnail(); ?>'/>
-
-
-
-            <?php endwhile; ?>
-
-            <?php else: ?>
-
-                <!-- article -->
-                <article>
-
-                    <h2><?php _e('Sorry, nothing to display.', 'html5blank'); ?></h2>
-
-                </article>
-                <!-- /article -->
-
-            <?php endif; ?>
         </map>
-        <?php wp_reset_query(); ?>
+
 
     </div>
 

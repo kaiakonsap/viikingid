@@ -34,19 +34,24 @@
 
     <!-- header -->
     <header>
+
+
         <div id="icons">
+
             <?php if ( dynamic_sidebar('Keeled') ) : else : endif; ?>
             <div class="fb-like" data-href="https://www.facebook.com/Viikingitekyla" data-height="24" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
 
         </div>
-        <!-- nav -->
         <button type="button" class="navbar-toggle">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
+        <!-- nav -->
+<div class="accordion">
         <?php if ( dynamic_sidebar('Akordion') ) : else : endif; ?>
+</div>
         <div class="navbar-collapse">
             <div class="nav navbar-nav">
                 <?php if (function_exists(shailan_dropdown_menu())) {

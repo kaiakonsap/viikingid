@@ -1,4 +1,4 @@
-<?php /* Template Name: Kategooria Template */
+<?php
 get_header("header2"); ?>
 
 <div class="wrapper">

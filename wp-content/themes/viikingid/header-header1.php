@@ -9,16 +9,12 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
-    <?php wp_head(); ?>
+
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.10.2.min.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/jquery.panorama.css"
           media="screen"/>
-
-    <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.panorama.js"></script>
 
-    <script src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/owl.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $("img.advancedpanorama").panorama({
@@ -28,7 +24,6 @@
             });
 
 
-            $("#owl3").owlCarousel();
 
 
         });
@@ -36,6 +31,11 @@
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/cvi_text_lib.js"></script>
     <script type="text/javascript"
             src="<?php echo get_template_directory_uri(); ?>/js/jquery.advanced-panorama.js"></script>
+
+    <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+
+    <script src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/owl.js"></script>
 </head>
 
 <body id="panorama_body">
@@ -49,11 +49,18 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 <div id="container">
     <header>
-
         <div id="icons">
+
             <?php if ( dynamic_sidebar('Keeled') ) : else : endif; ?>
             <div class="fb-like" data-href="https://www.facebook.com/Viikingitekyla" data-width="24" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
         </div>
+        <button type="button" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
         <!-- nav -->
         <a href="#">
             <span id="advert">
@@ -62,12 +69,7 @@
                 </span>
             </span>
         </a>
-        <button type="button" class="navbar-toggle">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
+
 
         <div class="navbar-collapse">
             <div class="nav navbar-nav">

@@ -1,4 +1,4 @@
-<?php
+<?php  /* Template Name: Menüü jm tabelite Template */
 get_header("header2"); ?>
 
 <div class="wrapper">
@@ -30,27 +30,29 @@ get_header("header2"); ?>
             </div>
 
             <div id="frame_content">
+                <div id="the_table">
 
 
-                    <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-                <?php edit_post_link(); ?>
-                       <?php the_content(); ?>
+                        <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+                    <?php edit_post_link(); ?>
+                           <?php the_content(); ?>
 
 
-                    <?php endwhile; ?>
+                        <?php endwhile; ?>
 
 
-                    <?php else: ?>
+                        <?php else: ?>
 
-                        <!-- article -->
-                        <article>
+                            <!-- article -->
+                            <article>
 
-                            <h2><?php _e('Sorry, nothing to display.', 'html5blank'); ?></h2>
+                                <h2><?php _e('Sorry, nothing to display.', 'html5blank'); ?></h2>
 
-                        </article>
-                        <!-- /article -->
-                    <?php endif; ?>
+                            </article>
+                            <!-- /article -->
+                        <?php endif; ?>
 
+                </div>
             </div>
 
 
