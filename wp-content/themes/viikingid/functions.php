@@ -19,7 +19,7 @@
 
 
 if (!isset($content_width)) {
-    $content_width = 900;
+    $content_width = 500;
 }
 
 
@@ -91,10 +91,10 @@ function viking_nav()
 }
 
 //[foobar]
-function item($atts, $content = null)
+function gallery($atts, $content = null)
 {
     $div_content = apply_filters('the_content', $content);
-    return ' <div class="item">' . $div_content . '</div>';
+    return ' <div id="image_content">' . $div_content . '</div>';
 }
 
 function img($atts, $content = null)
@@ -110,7 +110,7 @@ function text($atts, $content = null)
     return '<div class="text"><p>' . $div_content . '</p></div>';
 }
 
-add_shortcode('slaid', 'item');
+add_shortcode('galerii', 'gallery');
 add_shortcode('pilt', 'img');
 add_shortcode('tekst', 'text');
 
