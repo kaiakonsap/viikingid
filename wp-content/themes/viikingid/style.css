@@ -2897,10 +2897,13 @@ a:hover {
         padding: 0;
         margin: 0;
         background-size: cover;
+        background-position: center;
         position: absolute;
         width: 100%;
         height: 35px;
         content: '';
+        z-index: -1;
+
     }
     #frame .paper:before {
 
@@ -3093,6 +3096,12 @@ a:hover {
     }
     footer {
         padding: 30px 0;
+    }
+}
+@media screen and (max-width: 560px) {
+
+    #frame_content {
+        padding: 26px 18px;
     }
 }
 @media screen and (max-width: 450px)
