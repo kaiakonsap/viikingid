@@ -2332,7 +2332,10 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
+body
+{
+    min-height: 100%;
+}
 #panorama_body {
     font-size: 18px;
 }
@@ -2389,6 +2392,10 @@ strong
 table strong
 {
     margin: 15px 0 7px 0;
+}
+table td
+{
+    padding-right: 10px;
 }
 
 a {
@@ -2960,6 +2967,10 @@ a:hover {
     #frame_content .item {
         margin: 30px 32px 36px 32px !important;
     }
+    #frame_content a
+    {
+        padding: 0;
+    }
 
     .owl-carousel .item p {
         display: inline-block;
@@ -2969,9 +2980,7 @@ a:hover {
         padding: 0 !important;
     }
 
-    .frame_wrap {
-        overflow: visible;
-    }
+
 
 
     .thumbs .item
@@ -2981,33 +2990,50 @@ a:hover {
     }
 
 
-    .thumb .frame_wrap {
+    .thumb {
+       display:block;
+    }
+    .thumb .frame_wrap, .frame_wrap {
         width: 100%;
-        max-width: 260px;
     }
 
     .frame_wrap:before {
         background-image: none !important;
     }
 
-    .thumb .frame_wrap .img_wrap {
-        margin: 0;
-        height: 150px;
-        width: 150px;
-    }
+
     .thumb .img_wrap img{
         height: 100%;
         width: auto;
+        position: relative;
     }
 
     .img_wrap {
-        margin: 37px 0 20px 0;
-
+        margin: 0;
+        width: 100%;
+        height: 283px;
     }
+    .thumb .frame_wrap .img_wrap {
+        margin: 0 auto;
+        height: 150px;
+        max-width: 150px;
+        width: auto;
+    }
+    .link
+    {
+        width: auto !important;
+    }
+    .lightbox {
 
-
+        left: 0 !important;
+    }
+    .fold {
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
    .thumbs .img_wrap, #frame_content .img_wrap .fold {
-        border: 15px double #edb742;
+        border: 15px double transparent;
         -webkit-border-image-source: url(./img/border-image-2.png);
         -webkit-border-image-slice: 28;
         -webkit-border-image-width: 15px;
@@ -3033,6 +3059,9 @@ a:hover {
         border-image-width: 15px;
         border-image-outset: 0;
         border-image-repeat: round;
+       -moz-box-sizing:    border-box;
+       -webkit-box-sizing: border-box;
+       box-sizing: border-box;
     }
     #frame_content .img_wrap .fold img
     {
@@ -3104,6 +3133,17 @@ a:hover {
         padding: 26px 18px;
     }
 }
+@media screen and (max-width: 400px)
+{
+    .link
+    {
+        height:258px ;
+    }
+#frame_content .img_wrap .fold
+{
+    border: none;
+}
+}
 @media screen and (max-width: 450px)
 {
     .widget_nice_navigation {
@@ -3111,18 +3151,18 @@ a:hover {
         margin: 0 auto;
     }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 330px) {
     .widget_nice_navigation {
         width: 100%;
         margin: 0 auto;
     }
-    .img_wrap  img {
-        width: auto;
-        height: 100%
-    }
+
 
     .img_wrap {
         overflow: hidden;
+    }
+    .thumb .frame_wrap .img_wrap {
+        display: block;
     }
 }
 
@@ -3139,7 +3179,7 @@ a:hover {
 #owl3 {
 
     margin-top: -10px;
-    border-top: 20px double #edb742;
+    border-top: 20px double transparent;
     -moz-border-image: url("./img/slider_frame.png") 95 30 round; /* Firefox */
     -webkit-border-image: url("./img/slider_frame.png") 95 30 round; /* Safari */
     -o-border-image: url("./img/slider_frame.png") 95 30 round; /* Opera */
@@ -3504,6 +3544,16 @@ div.nice_navigation li.page-has-children {
 {
     display: block;
 }
+.widget_nice_navigation .menu ul li a
+{
+    font-size: 20px;
+    line-height: 33px;
+}
+.widget_nice_navigation .menu ul li ul li a
+{
+    font-size: 16px !important;
+    line-height: 33px;
+}
 
 .link
 {
@@ -3589,8 +3639,8 @@ height:331px !important;
 }
 .sv-photo img{
 
-border-top: 15px double #edb742 !important;
-border-bottom: 15px double #edb742 !important;
+border-top: 15px double transparent !important;
+border-bottom: 15px double transparent !important;
     -webkit-border-image-source: url(./img/border-image-2.png)!important;
     -webkit-border-image-slice: 17 !important;
     -webkit-border-image-width: 15px !important;
