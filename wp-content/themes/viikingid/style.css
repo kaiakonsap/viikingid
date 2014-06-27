@@ -2377,11 +2377,11 @@ p {
     font-family: lucida_regular;
 }
 
-p span {
+/*p span {
     font-family: avqest, algerian, "Book Antiqua";
     font-size: 25px;
     line-height: normal;
-}
+}*/
 strong
 {
     font-weight: bold;
@@ -3637,38 +3637,7 @@ iframe
 {
 height:331px !important;
 }
-.sv-photo img{
 
-border-top: 15px double transparent !important;
-border-bottom: 15px double transparent !important;
-    -webkit-border-image-source: url(./img/border-image-2.png)!important;
-    -webkit-border-image-slice: 17 !important;
-    -webkit-border-image-width: 15px !important;
-    -webkit-border-image-outset: 0 !important;
-    -webkit-border-image-repeat: repeat !important;
-    -moz-border-image-source: url(./img/border-image-2.png) !important;
-    -moz-border-image-slice: 17 !important;
-    -moz-border-image-width: 15px !important;
-    -moz-border-image-outset: 0 !important;
-    -moz-border-image-repeat: repeat !important;
-    -ms-border-image-source: url(./img/border-image-2.png) !important;
-    -ms-border-image-slice: 17 !important;
-    -ms-border-image-width: 15px !important;
-    -ms-border-image-outset: 0 !important;
-    -ms-border-image-repeat: repeat !important;
-    -o-border-image-source: url(./img/border-image-2.png) !important;
-    -o-border-image-slice: 17 !important;
-    -o-border-image-width: 15px !important;
-    -o-border-image-outset: 0 !important;
-    -o-border-image-repeat: repeat !important;
-    border-image-source: url(./img/border-image-2.png) !important;
-    border-image-slice: 17 !important;
-    border-image-width: 15px !important;
-    border-image-outset: 0 !important;
-    border-image-repeat: repeat !important;
-    border-left: none !important;
-    border-right: none !important;
-}
 .sv-nav-page-label
 {
     display: none !important;

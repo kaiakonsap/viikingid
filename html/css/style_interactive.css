@@ -7,7 +7,7 @@
 #the_map
 {
     width: 80%;
-background-image: url("../images/map.jpg");
+background-image: url("./img/map.jpg");
     background-position: -707px -425px;
     background-repeat: no-repeat;
     background-color: blue;
