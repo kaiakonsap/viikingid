@@ -92,22 +92,19 @@ height:100% !important;
 position: absolute;
 display: block;
 list-style: none;
-outline: 1px dashed;
-overflow: hidden;
-background-color:red;
 z-index:10;
 }
 #area1 {
 left: 1424px;
 top: 70px;
-width: 98px;
-height: 104px;
+    width: 182px;
+    height: 64px;
 }
 #area2 {
 left: 2424px;
 top: 7px;
-width: 98px;
-height: 104px;
+    width: 182px;
+    height: 54px;
 }
 ol
 {

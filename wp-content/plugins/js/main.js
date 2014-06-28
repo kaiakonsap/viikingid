@@ -25,7 +25,7 @@ jQuery(function () {
     });
     if(jQuery("div").hasClass("scrollableArea")){
 
-        jQuery('.scrollableArea').append('<ol><li id="area1"><a href="#">Desc1</a></li><li id="area2"><a href="#">Desc2</a></li></ol>');
+        jQuery('.scrollableArea').append('<ol><li class="cloud" id="area1"><p><a href="#">Desc1</a></p></li><li  class="cloud" id="area2"><p><a href="#">Desc2</a></p></li></ol>');
     }
     // Find all YouTube videos
     if(document.getElementById("image_content")){
