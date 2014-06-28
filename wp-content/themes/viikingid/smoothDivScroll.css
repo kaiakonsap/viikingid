@@ -18,8 +18,8 @@ div.scrollingHotSpotLeft
 	height: 100%;
 	/* There is a big background image and it's used to solve some problems I experienced
     in Internet Explorer 6. */
-	background-image: url(./img/big_transparent.gif);
-	background-repeat: repeat;
+	background-image: url(./img/arrow_left.gif);
+	background-repeat: no-repeat;
 	background-position: center center;
 	position: absolute;
 	z-index: 200;
@@ -32,7 +32,7 @@ div.scrollingHotSpotLeft
 div.scrollingHotSpotLeftVisible
 {
 	background-image: url(./img/arrow_left.gif);
-	background-color: #fff;
+	background-color: transparent !important;
 	background-repeat: no-repeat;
 	opacity: 0.35; /* Standard CSS3 opacity setting */
 	-moz-opacity: 0.35; /* Opacity for really old versions of Mozilla Firefox (0.9 or older) */
@@ -46,8 +46,8 @@ div.scrollingHotSpotRight
 	min-width: 75px;
 	width: 10%;
 	height: 100%;
-	background-image: url(./img/big_transparent.gif);
-	background-repeat: repeat;
+	background-image: url(./img/arrow_right.gif);
+	background-repeat: no-repeat;
 	background-position: center center;
 	position: absolute;
 	z-index: 200;
@@ -59,7 +59,7 @@ div.scrollingHotSpotRight
 div.scrollingHotSpotRightVisible
 {
 	background-image: url(./img/arrow_right.gif);
-	background-color: #fff;
+	background-color: transparent !important;
 	background-repeat: no-repeat;
 	opacity: 0.35;
 	filter: alpha(opacity = 35);
@@ -115,7 +115,7 @@ width:1px;
 			width:100% !important;
 			height: 100%;
 			position: relative;
-            top: -219px;
+            top: -112px;
 		}
 		
 		#makeMeScrollable div.scrollableArea img

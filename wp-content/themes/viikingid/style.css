@@ -3174,7 +3174,7 @@ a:hover {
 }
 
 #owl_back {
-
+margin-top: -115px;
 }
 
 #owl3 {
@@ -3646,3 +3646,7 @@ height:331px !important;
 }
 
 
+#data
+{
+    display: none;
+}

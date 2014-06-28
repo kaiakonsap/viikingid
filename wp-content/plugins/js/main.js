@@ -1,4 +1,4 @@
-$.noConflict();
+jQuery.noConflict();
 jQuery(function () {
     var zoomlevel=1;
 
@@ -24,8 +24,8 @@ jQuery(function () {
         }
     });
     if(jQuery("div").hasClass("scrollableArea")){
-
-        jQuery('.scrollableArea').append('<ol><li class="cloud" id="area1"><p><a href="#">Desc1</a></p></li><li  class="cloud" id="area2"><p><a href="#">Desc2</a></p></li></ol>');
+var data=document.getElementById("data");
+        jQuery('.scrollableArea').append('<ol>'+data.innerHTML+'</ol>');
     }
     // Find all YouTube videos
     if(document.getElementById("image_content")){

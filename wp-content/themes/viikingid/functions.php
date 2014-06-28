@@ -19,14 +19,19 @@ function my_init() {
     if (!is_admin()) {
         // comment out the next two lines to load the local copy of jQuery
         wp_deregister_script('jquery');
-        wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.9.1');
+        wp_register_script('jquery', plugins_url('js/jquery-1.10.2.min.js'), array(), '1.9.2');
        // wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js', false, '1.3.2');
         wp_enqueue_script('jquery');
     }
 }
 
 function wpb_adding_scripts() {
+    wp_register_script('owl', plugins_url('js/owl.carousel.js'), array('jquery'),'1.1', true);
+    wp_register_script('owl_spec', plugins_url('js/owl.js'), array('jquery','owl'),'1.1', true);
 
+
+    wp_enqueue_script('owl');
+    wp_enqueue_script('owl_spec');
 
 }
 
