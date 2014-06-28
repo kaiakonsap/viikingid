@@ -1,4 +1,4 @@
-
+$.noConflict();
 jQuery(function () {
     var zoomlevel=1;
 
@@ -23,7 +23,10 @@ jQuery(function () {
             jQuery('.accordion').slideUp('fast');
         }
     });
+    if(jQuery("div").hasClass("scrollableArea")){
 
+        jQuery('.scrollableArea').append('<ol><li id="area1"><a href="#">Desc1</a></li><li id="area2"><a href="#">Desc2</a></li></ol>');
+    }
     // Find all YouTube videos
     if(document.getElementById("image_content")){
     var $allVideos = jQuery("iframe[src^='http://www.youtube.com']"),

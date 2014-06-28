@@ -15,6 +15,15 @@
 /*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
+function my_init() {
+    if (!is_admin()) {
+        // comment out the next two lines to load the local copy of jQuery
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.9.1');
+       // wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js', false, '1.3.2');
+        wp_enqueue_script('jquery');
+    }
+}
 
 function wpb_adding_scripts() {
 
@@ -396,7 +405,7 @@ add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline 
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts' );
-
+add_action('init', 'my_init');
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds

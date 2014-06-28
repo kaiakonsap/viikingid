@@ -3,15 +3,7 @@ get_header("header1"); ?>
 
 
     <div class="cloud"><p><a href="#"> Testime pilve</a></p></div>
-    <div class="wrapper panorama">
 
-        <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-            <p><?php the_title() ?></p>
-        <?php endwhile; ?>
-        <?php endif; ?>
-    </div>
-
-    <div id="frame_content">
 
 
         <?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -32,8 +24,6 @@ get_header("header1"); ?>
             </article>
             <!-- /article -->
         <?php endif; ?>
-
-    </div>
 
     </div>
 <?php get_footer("footer1"); ?>

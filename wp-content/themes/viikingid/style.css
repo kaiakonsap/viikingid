@@ -2334,7 +2334,7 @@ html {
 }
 body
 {
-    min-height: 100%;
+    min-height: 100% !important;
 }
 #panorama_body {
     font-size: 18px;
@@ -2467,6 +2467,7 @@ a:hover {
     overflow: hidden;
     height:192px;
     width:300px;
+    z-index: 12;
 }
 #advert #img_wrap
 {
@@ -3464,6 +3465,7 @@ ul.children li a
     position: relative;
     left: 374px;
     top: 325px;
+    z-index: 100;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     border-top-left-radius: 50px 30px;

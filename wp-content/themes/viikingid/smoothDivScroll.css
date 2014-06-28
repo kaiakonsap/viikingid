@@ -115,9 +115,10 @@ width:1px;
 }
 		#makeMeScrollable
 		{
-			width:100%;
+			width:100% !important;
 			height: 100%;
 			position: relative;
+            top: -219px;
 		}
 		
 		#makeMeScrollable div.scrollableArea img

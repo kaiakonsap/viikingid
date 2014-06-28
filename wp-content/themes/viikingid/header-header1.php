@@ -9,8 +9,7 @@
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="<?php bloginfo('description'); ?>">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 
     <?php wp_head(); ?>
@@ -28,7 +27,9 @@
 
 <body id="panorama_body">
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>
+    $.noConflict();
+    (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
@@ -58,7 +59,9 @@
             </span>
         </a>
 
-
+        <div class="accordion">
+            <?php if ( dynamic_sidebar('Akordion') ) : else : endif; ?>
+        </div>
         <div class="navbar-collapse">
             <div class="nav navbar-nav">
                 <?php if (function_exists(shailan_dropdown_menu())) {
