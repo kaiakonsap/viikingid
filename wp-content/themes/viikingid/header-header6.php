@@ -9,12 +9,11 @@
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="<?php bloginfo('description'); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style_interactive.css"
-          media="screen"/>
     <?php wp_head(); ?>
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.10.2.min.js"></script>
+
     <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/inter_map.js"></script>
+
 
     <!--[if lt IE 9]>
     <script src="js/aFarkas-html5shiv-cec73ff/dist/html5shiv.js"></script>

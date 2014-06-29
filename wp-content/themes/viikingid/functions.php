@@ -28,10 +28,12 @@ function my_init() {
 function wpb_adding_scripts() {
     wp_register_script('owl', plugins_url('js/owl.carousel.js'), array('jquery'),'1.1', true);
     wp_register_script('owl_spec', plugins_url('js/owl.js'), array('jquery','owl'),'1.1', true);
+    wp_register_script('scroll', plugins_url('js/jquery.scrollTo.js'), array('jquery','owl'),'1.1', true);
 
 
     wp_enqueue_script('owl');
     wp_enqueue_script('owl_spec');
+    wp_enqueue_script('scroll');
 
 }
 

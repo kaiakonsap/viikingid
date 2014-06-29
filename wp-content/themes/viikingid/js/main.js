@@ -23,6 +23,13 @@ jQuery(function () {
             jQuery('.accordion').slideUp('fast');
         }
     });
+    if(jQuery("div").hasClass("imgmap")){
+var height=jQuery(window).height();
+var width=jQuery(window).width();
+        jQuery('.imgmap').css('height',height);
+        jQuery('.imgmap').css('width',width);
+
+    }
     if(jQuery("div").hasClass("scrollableArea")){
 var data=document.getElementById("data");
         jQuery('.scrollableArea').append('<ol>'+data.innerHTML+'</ol>');
@@ -72,4 +79,20 @@ var data=document.getElementById("data");
 
 // Kick off one resize to fix all videos on page load
     }).resize();
+});
+window.onload = function ()
+    {
+        if(jQuery("div").hasClass("imgmap")){
+
+            // This one is important, many browsers don't reset scroll on refreshes
+            // Reset all scrollable panes to (0,0)
+            jQuery('div.imgmap').scrollTo( 20,50 );
+            // Reset the screen to (0,0)
+            jQuery.scrollTo( 500,20 );
+        }
+    }
+jQuery(window).on('beforeunload', function() {
+    jQuery(window).scrollTop(0);
+    jQuery.scrollTo( 500,20 );
+
 });
