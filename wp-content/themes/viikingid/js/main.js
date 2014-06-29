@@ -86,13 +86,35 @@ window.onload = function ()
 
             // This one is important, many browsers don't reset scroll on refreshes
             // Reset all scrollable panes to (0,0)
-            jQuery('div.imgmap').scrollTo( 20,50 );
+            jQuery('div.imgmap').scrollTo( 500,50 );
             // Reset the screen to (0,0)
-            jQuery.scrollTo( 500,20 );
+            jQuery.scrollTo( 0,0 );
+            jQuery("#top").hoverIntent(function()
+            {
+                jQuery('div.imgmap').animate({scrollTop:'0'}, 'slow');
+            })
+            jQuery("#bottom").hoverIntent(function()
+            {
+                var scrollBottom =  jQuery('div.imgmap').scrollTop()+ jQuery(window).height();
+                jQuery('div.imgmap').animate({scrollTop:scrollBottom}, 'slow');
+            })
+            jQuery("#left").hoverIntent(function()
+            {
+
+                jQuery('div.imgmap').animate({scrollLeft:'0'}, 'slow');
+            })
+            jQuery("#right").hoverIntent(function()
+            {
+                var leftPos = jQuery('div.imgmap').scrollLeft()+ jQuery(window).width();
+                jQuery('div.imgmap').animate({scrollLeft:leftPos}, 'slow');
+            })
+
+
+
         }
     }
 jQuery(window).on('beforeunload', function() {
     jQuery(window).scrollTop(0);
-    jQuery.scrollTo( 500,20 );
+    jQuery.scrollTo( 0,0 );
 
 });

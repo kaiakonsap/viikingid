@@ -6,7 +6,10 @@ get_header("header6"); ?>
         <?php edit_post_link(); ?>
         <?php the_content(); ?>
         <?php the_post_thumbnail(); ?>
-
+<div class="arrow" id="top"></div>
+<div class="arrow" id="left"></div>
+<div class="arrow" id="right"></div>
+<div class="arrow" id="bottom"></div>
     <?php endwhile; ?>
 
 
