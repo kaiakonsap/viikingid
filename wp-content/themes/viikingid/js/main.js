@@ -91,22 +91,27 @@ window.onload = function ()
             jQuery.scrollTo( 0,0 );
             jQuery("#top").hoverIntent(function()
             {
-                jQuery('div.imgmap').animate({scrollTop:'0'}, 'slow');
+                jQuery('div.imgmap').stop().animate({scrollTop:'-=300'}, '2000');
             })
             jQuery("#bottom").hoverIntent(function()
             {
                 var scrollBottom =  jQuery('div.imgmap').scrollTop()+ jQuery(window).height();
-                jQuery('div.imgmap').animate({scrollTop:scrollBottom}, 'slow');
+                jQuery('div.imgmap').stop().animate({scrollTop:scrollBottom}, '2000');
             })
             jQuery("#left").hoverIntent(function()
             {
 
-                jQuery('div.imgmap').animate({scrollLeft:'0'}, 'slow');
+                jQuery('div.imgmap').stop().animate({scrollLeft:'-=300'}, '2000');
             })
             jQuery("#right").hoverIntent(function()
             {
                 var leftPos = jQuery('div.imgmap').scrollLeft()+ jQuery(window).width();
-                jQuery('div.imgmap').animate({scrollLeft:leftPos}, 'slow');
+                jQuery('div.imgmap').stop().animate({scrollLeft:leftPos}, '2000');
+            })
+            jQuery(".arrow").mouseleave(function()
+            {
+                var leftPos = jQuery('div.imgmap').scrollLeft()+ jQuery(window).width();
+                jQuery('div.imgmap').stop().animate({scrollLeft:leftPos}, '2000');
             })
 
 
